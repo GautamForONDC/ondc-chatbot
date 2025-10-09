@@ -1,0 +1,35 @@
+    import fitz  # PyMuPDF
+    from glob import glob
+    import os
+    
+    # 1. Define the directory where your actual PDF files are stored
+    pdf_dir = NetworkPolicy # Assuming this directory exists relative to the script
+    
+    # 2. Find all PDF files
+    pdf_files = glob(os.path.join(pdf_dir, .pdf))
+    
+    combined_text = 
+    
+    print(fFound {len(pdf_files)} PDFs to process.)
+    
+    for pdf_path in pdf_files
+        try
+            doc = fitz.open(pdf_path)
+            txt = 
+            for page in doc
+                txt += page.get_text()
+            doc.close()
+            combined_text += fnn--- FILE {os.path.basename(pdf_path)} ---nn
+            combined_text += txt
+            
+            print(fSuccessfully extracted text from {pdf_path})
+            
+        except Exception as e
+            print(fError processing {pdf_path} {e})
+            
+    # 3. Print the massive combined string to the console
+    # You will copy this entire output.
+    print(n--- START ONDC COMBINED POLICY TEXT ---n)
+    print(combined_text)
+    print(n--- END ONDC COMBINED POLICY TEXT ---n)
+    
