@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useRef, useEffect } from 'react';
-import { Bot, User, Send, Loader2, CheckCircle, XCircle } from 'lucide-react';
+import { Bot, User, Send, Loader2, CheckCircle } from 'lucide-react';
+import { Inter } from "next/font/google"; // Import Inter for use in styles (optional, but good practice)
+
 
 // --- NEW COMPONENT: Renders the structured checklist ---
 const ChecklistRenderer = ({ data }) => {
@@ -60,6 +62,7 @@ const ChatMessage = ({ role, content }) => {
         <div className={`font-semibold text-gray-800 ${role === 'user' ? 'text-indigo-700' : 'text-gray-700'}`}>
           {role === 'user' ? 'You' : 'ONDC Expert'}
         </div>
+        {/* Use dangerouslySetInnerHTML for safe text responses, which includes error messages */}
         <div className="prose text-gray-700 mt-1" dangerouslySetInnerHTML={{ __html: content.replace(/\n/g, '<br/>') }}></div>
       </div>
       {role === 'user' && <User className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />}
@@ -80,36 +83,6 @@ const App = () => {
 
   useEffect(scrollToBottom, [messages]);
 
-  // Exponential backoff retry logic for fetch
-  const MAX_RETRIES = 3;
-  const initialDelay = 1000;
-  
-  const generateContentWithRetry = async (payload, retryCount = 0) => {
-      const apiKey = "" // If you want to use models other than gemini-2.5-flash-preview-05-20 or imagen-3.0-generate-002, provide an API key here. Otherwise, leave this as-is.
-      const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
-
-      try {
-          const response = await fetch(apiUrl, {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify(payload)
-          });
-
-          if (!response.ok) {
-              throw new Error(`HTTP error! status: ${response.status}`);
-          }
-          return response;
-      } catch (error) {
-          if (retryCount < MAX_RETRIES) {
-              const delay = initialDelay * Math.pow(2, retryCount) + Math.random() * 500;
-              await new Promise(resolve => setTimeout(resolve, delay));
-              return generateContentWithRetry(payload, retryCount + 1);
-          }
-          throw error;
-      }
-  };
-
-
   // Handle sending the message to the API Route
   const handleSend = async (e) => {
     e.preventDefault();
@@ -122,82 +95,45 @@ const App = () => {
     // Add user message to state
     setMessages(prev => [...prev, { role: 'user', content: userMessage }]);
     
-    // --- API Payload with JSON Schema ---
-    const systemPrompt = "You are a world-class expert on ONDC policies. Based only on the provided context, extract the specific rules, laws, and compliance requirements related to the user's query. Format your output strictly as a JSON array of compliance categories and their detailed checklist items. DO NOT add any conversational text, preamble, or markdown outside of the JSON block.";
-
-    const payload = {
-        contents: [{ parts: [{ text: userMessage }] }],
-        tools: [{ "google_search": {} }],
-        systemInstruction: {
-            parts: [{ text: systemPrompt }]
-        },
-        generationConfig: {
-            responseMimeType: "application/json",
-            responseSchema: {
-                type: "ARRAY",
-                items: {
-                    type: "OBJECT",
-                    properties: {
-                        "category_title": { 
-                            "type": "STRING", 
-                            "description": "The major category or section title, e.g., 'Food Safety Laws', 'Legal Metrology Laws'." 
-                        },
-                        "checklist_items": {
-                            "type": "ARRAY",
-                            "items": {
-                                "type": "OBJECT",
-                                "properties": {
-                                    "rule_name": { 
-                                        "type": "STRING", 
-                                        "description": "A concise title for the specific rule, e.g., 'Packaging & Labeling', 'Product Recall'." 
-                                    },
-                                    "compliance_detail": { 
-                                        "type": "STRING", 
-                                        "description": "The detailed action required for compliance, written in clear, actionable language, e.g., 'Contractually ensure sellers comply with Food Safety and Standards (Packaging) Regulations, 2018'." 
-                                    },
-                                    "source_reference": {
-                                        "type": "STRING",
-                                        "description": "The exact source citation from the policy, e.g., 'Compliance Handbook, Section I.1.2, page 39'."
-                                    }
-                                },
-                                "required": ["rule_name", "compliance_detail"]
-                            }
-                        }
-                    },
-                    "required": ["category_title", "checklist_items"]
-                }
-            }
-        }
-    };
-    // --- END API Payload ---
+    // NOTE: The JSON Schema and Gemini API call logic are in the secure backend route at /api/chat/route.js.
 
     try {
-      const response = await generateContentWithRetry(payload);
-      const result = await response.json();
-      
-      const candidate = result.candidates?.[0];
-      let assistantContent = "I encountered an issue getting a structured answer. Please try rephrasing your question."; // Default error message
+      // 1. Call the local Next.js API route securely
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prompt: userMessage }),
+      });
 
-      if (candidate && candidate.content?.parts?.[0]?.text) {
-        const jsonText = candidate.content.parts[0].text;
+      const data = await response.json(); // Data from the Next.js API route
+
+      if (!response.ok || data.error) {
+        // Handle error returned from the Next.js API route (including server config/key errors)
+        const errorMsg = data.error || 'Failed to get a valid response from the ONDC API route.';
+        setMessages(prev => [...prev, { role: 'assistant', content: `**API Route Error:** ${errorMsg}` }]);
+        console.error("API Route Error:", data.error);
+        return;
+      }
+      
+      // The API route is expected to return the raw JSON string in 'data.reply'
+      const jsonText = data.reply;
         
-        try {
-          // Attempt to parse the JSON output
-          const parsedJson = JSON.parse(jsonText);
-          assistantContent = parsedJson; // Set content as the structured array
-        } catch (jsonError) {
-          // If parsing fails (model outputted text instead of JSON), display the raw text
-          assistantContent = `**JSON Parsing Failed.** The model returned raw text instead of a structured checklist. Here is the output:\n\n${jsonText}`;
-        }
-      } else {
-         console.error("API Error: Candidates or content missing", result);
+      let assistantContent;
+      try {
+        // 2. Attempt to parse the JSON output string
+        const parsedJson = JSON.parse(jsonText);
+        assistantContent = parsedJson; // Set content as the structured array for ChecklistRenderer
+      } catch (jsonError) {
+        // If parsing fails (model outputted conversational text or an error message)
+        assistantContent = `**Response Format Error.** The model returned raw text instead of a structured checklist. Here is the response:\n\n${jsonText}`;
       }
 
       // Add assistant response to state
       setMessages(prev => [...prev, { role: 'assistant', content: assistantContent }]);
 
     } catch (error) {
-      setMessages(prev => [...prev, { role: 'assistant', content: `**Network Error:** Could not connect to the server or API failed after multiple retries.` }]);
+      // This catch block handles network errors during the fetch to /api/chat
+      setMessages(prev => [...prev, { role: 'assistant', content: `**Network Error:** Could not connect to the local server API route at /api/chat.` }]);
       console.error("Fetch Error:", error);
     } finally {
       setIsLoading(false);

@@ -1,13 +1,15 @@
 import { combinedPolicyText } from '@/policy_documents';
+import { NextResponse } from 'next/server'; // Import NextResponse for proper response handling
 
 // Note: This API Route uses the Vercel-friendly Edge runtime via the standard Request/Response objects.
 // In a real Next.js project, this file would be located at 'app/api/chat/route.js'.
 
 /**
  * Handle POST request for the chat generation.
- * This function replicates the core logic of constructing the RAG prompt and calling Gemini.
+ * This function handles the RAG prompt construction, secure API key usage, 
+ * and requests a structured JSON response from Gemini.
  * @param {Request} request - The incoming request object.
- * @returns {Response} - The generated content.
+ * @returns {Response} - The generated content (JSON string).
  */
 export async function POST(request) {
     try {
@@ -15,36 +17,32 @@ export async function POST(request) {
         const { prompt } = await request.json();
 
         if (!prompt) {
-            return new Response(JSON.stringify({ error: "Prompt is required" }), {
-                status: 400,
-                headers: { 'Content-Type': 'application/json' },
-            });
+            return NextResponse.json({ error: "Prompt is required" }, { status: 400 });
         }
 
-        // --- FIX START ---
-        // Access API Key from the environment variables (read from .env.local)
+        // Access API Key from the environment variables (read from .env.local on development, Vercel environment on deploy)
         const apiKey = process.env.GEMINI_API_KEY;
 
         if (!apiKey) {
-            throw new Error("GEMINI_API_KEY environment variable is not set. Please check your .env.local file.");
+            // Log an error and return a safe message to the client
+            console.error("GEMINI_API_KEY environment variable is not set.");
+            return NextResponse.json({ error: "Server configuration error: Gemini API Key is missing." }, { status: 500 });
         }
-        // --- FIX END ---
         
-        // 2. Construct the full prompt (RAG pattern)
+        // 2. Construct the full RAG prompt
         const fullPrompt = `
-You are an ONDC expert. Use the following documents only to answer questions clearly and concisely. Give your responses in a non-technical, simple language for a layperson. Also, give the section number of the law or the page number in the relevant ONDC document, ONDC Network Policy etc. Never cite the compliance handbook for responses. Instead point to the clause/section number in the laws. Also, keep the format of responses in the form of a simple checklist and not descriptive. Based on the user's questions, also ask if the user would like to know more about any of the specific parts of the response
+You are an ONDC expert. Use the following documents only to answer questions clearly and concisely. 
+Extract the specific rules, laws, and compliance requirements related to the user's query. 
+Based on the provided policy documents, answer the question: "${prompt}"
 
 --- DOCUMENT START ---
 ${combinedPolicyText}
 --- DOCUMENT END ---
-
-User Question: ${prompt}
 `;
         
-        // 3. Configure Gemini API call
-        const systemPrompt = "You are an ONDC expert. Answer the user's question clearly, concisely, and in a non-technical, simple language for a layperson. Always structure your response as a simple checklist. You MUST cite the section number or page number from the provided documents (e.g., 'Section 1.1' or 'Article 45'). Do not cite the compliance handbook. After answering, always ask if the user would like to know more about any specific part of the response.";
+        // 3. Configure Gemini API call for Structured JSON Output
+        const systemPrompt = "You are a world-class expert on ONDC policies. Based ONLY on the provided context, extract the specific rules, laws, and compliance requirements related to the user's query. Format your output STRICTLY as a JSON array of compliance categories and their detailed checklist items. You MUST cite the section number or page number from the provided documents (e.g., 'Section 1.1' or 'Article 45'). DO NOT add any conversational text, preamble, or markdown outside of the JSON block.";
 
-        // The API URL now uses the retrieved apiKey
         const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
 
         const payload = {
@@ -52,6 +50,43 @@ User Question: ${prompt}
             systemInstruction: {
                 parts: [{ text: systemPrompt }]
             },
+            generationConfig: {
+                responseMimeType: "application/json",
+                responseSchema: {
+                    type: "ARRAY",
+                    items: {
+                        type: "OBJECT",
+                        properties: {
+                            "category_title": { 
+                                "type": "STRING", 
+                                "description": "The major category or section title, e.g., 'Food Safety Laws', 'Legal Metrology Laws'." 
+                            },
+                            "checklist_items": {
+                                "type": "ARRAY",
+                                "items": {
+                                    type: "OBJECT",
+                                    properties: {
+                                        "rule_name": { 
+                                            "type": "STRING", 
+                                            "description": "A concise title for the specific rule, e.g., 'Packaging & Labeling', 'Product Recall'." 
+                                        },
+                                        "compliance_detail": { 
+                                            "type": "STRING", 
+                                            "description": "The detailed action required for compliance, written in clear, actionable language." 
+                                        },
+                                        "source_reference": {
+                                            "type": "STRING",
+                                            "description": "The exact source citation from the policy, e.g., 'Section 1.1.1' or 'Article 45'."
+                                        }
+                                    },
+                                    required: ["rule_name", "compliance_detail"]
+                                }
+                            }
+                        },
+                        required: ["category_title", "checklist_items"]
+                    }
+                }
+            }
         };
 
         let responseText = '';
@@ -67,7 +102,12 @@ User Question: ${prompt}
 
             if (response.ok) {
                 const result = await response.json();
-                responseText = result.candidates?.[0]?.content?.parts?.[0]?.text || "The model returned an empty response.";
+                // The expected output is a JSON STRING within the text part
+                responseText = result.candidates?.[0]?.content?.parts?.[0]?.text || null;
+                if (responseText) {
+                    // Send the raw JSON string back to the client
+                    return NextResponse.json({ reply: responseText }, { status: 200 });
+                }
                 break;
             } else if (attempt < maxRetries - 1) {
                 // Wait using exponential backoff before retrying
@@ -75,21 +115,17 @@ User Question: ${prompt}
                 delay *= 2;
             } else {
                 const errorBody = await response.text();
-                throw new Error(`Gemini API request failed with status ${response.status}: ${errorBody}`);
+                // Log and throw the error that caused the failure
+                console.error("Gemini API final failure:", errorBody);
+                throw new Error(`Gemini API request failed with status ${response.status}.`);
             }
         }
-
-        // 4. Return the AI response
-        return new Response(JSON.stringify({ reply: responseText }), {
-            status: 200,
-            headers: { 'Content-Type': 'application/json' },
-        });
+        
+        // If the model returned an empty text response after all retries
+        return NextResponse.json({ error: "Gemini model returned an empty response after retries." }, { status: 500 });
 
     } catch (error) {
         console.error("Chat API Error:", error);
-        return new Response(JSON.stringify({ error: `An unexpected error occurred: ${error.message}` }), {
-            status: 500,
-            headers: { 'Content-Type': 'application/json' },
-        });
+        return NextResponse.json({ error: `Server-side processing error: ${error.message}` }, { status: 500 });
     }
 }
