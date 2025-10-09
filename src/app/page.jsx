@@ -1,36 +1,114 @@
 "use client";
 import React, { useState, useRef, useEffect } from 'react';
-import { Bot, User, Send, Loader2 } from 'lucide-react';
+import { Bot, User, Send, Loader2, CheckCircle, XCircle } from 'lucide-react';
 
-// Mock implementation of a simple fetch hook with retry logic. 
-// In a full Next.js project, you would handle this more robustly.
+// --- NEW COMPONENT: Renders the structured checklist ---
+const ChecklistRenderer = ({ data }) => {
+  if (!data || data.length === 0) {
+    return <p className="text-gray-500 italic">No specific checklist items found in the policy data for this query.</p>;
+  }
 
-const ChatMessage = ({ role, content }) => (
-  <div className={`flex items-start space-x-4 p-4 rounded-lg shadow-sm ${role === 'user' ? 'bg-indigo-50/70 justify-end' : 'bg-white/90'}`}>
-    {role === 'assistant' && <Bot className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />}
-    <div className={`max-w-4/5 text-sm ${role === 'user' ? 'text-right' : 'text-left'}`}>
-      <div className={`font-semibold text-gray-800 ${role === 'user' ? 'text-indigo-700' : 'text-gray-700'}`}>
-        {role === 'user' ? 'You' : 'ONDC Expert'}
-      </div>
-      <div className="prose text-gray-700 mt-1" dangerouslySetInnerHTML={{ __html: content.replace(/\n/g, '<br/>') }}></div>
+  return (
+    <div className="space-y-4 pt-2">
+      {data.map((category, index) => (
+        <div key={index} className="rounded-lg border border-indigo-100 bg-indigo-50 p-4 shadow-md">
+          <h3 className="text-lg font-bold text-indigo-700 mb-3 border-b border-indigo-200 pb-2">
+            {category.category_title}
+          </h3>
+          <ul className="space-y-2">
+            {category.checklist_items.map((item, itemIndex) => (
+              <li key={itemIndex} className="flex items-start text-gray-700">
+                <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mr-3 mt-1" />
+                <p className="text-sm leading-relaxed">
+                  <span className="font-semibold">{item.rule_name}:</span> {item.compliance_detail} 
+                  {item.source_reference && (
+                    <span className="text-xs text-indigo-500 ml-2 italic">({item.source_reference})</span>
+                  )}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </div>
-    {role === 'user' && <User className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />}
-  </div>
-);
+  );
+};
+// --- END NEW COMPONENT ---
 
-// Main Application Component (Replaces Streamlit UI)
+
+const ChatMessage = ({ role, content }) => {
+  // Check if content is an array (the structured JSON data)
+  if (role === 'assistant' && Array.isArray(content)) {
+    return (
+      <div className="flex items-start space-x-4 p-4 rounded-lg shadow-sm bg-white/90">
+        <Bot className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />
+        <div className="max-w-4/5 text-left w-full">
+          <div className="font-semibold text-gray-700 mb-3">
+            ONDC Expert Checklist
+          </div>
+          <ChecklistRenderer data={content} />
+        </div>
+      </div>
+    );
+  }
+
+  // Otherwise, render as standard text (for user input, errors, or simple text responses)
+  return (
+    <div className={`flex items-start space-x-4 p-4 rounded-lg shadow-sm ${role === 'user' ? 'bg-indigo-50/70 justify-end' : 'bg-white/90'}`}>
+      {role === 'assistant' && <Bot className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />}
+      <div className={`max-w-4/5 text-sm ${role === 'user' ? 'text-right' : 'text-left'}`}>
+        <div className={`font-semibold text-gray-800 ${role === 'user' ? 'text-indigo-700' : 'text-gray-700'}`}>
+          {role === 'user' ? 'You' : 'ONDC Expert'}
+        </div>
+        <div className="prose text-gray-700 mt-1" dangerouslySetInnerHTML={{ __html: content.replace(/\n/g, '<br/>') }}></div>
+      </div>
+      {role === 'user' && <User className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />}
+    </div>
+  );
+};
+
 const App = () => {
   const [prompt, setPrompt] = useState('');
+  // Content can now be a string (for errors/text) or an Array (for checklist JSON)
   const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
 
-  // Auto-scroll to the latest message
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(scrollToBottom, [messages]);
+
+  // Exponential backoff retry logic for fetch
+  const MAX_RETRIES = 3;
+  const initialDelay = 1000;
+  
+  const generateContentWithRetry = async (payload, retryCount = 0) => {
+      const apiKey = "" // If you want to use models other than gemini-2.5-flash-preview-05-20 or imagen-3.0-generate-002, provide an API key here. Otherwise, leave this as-is.
+      const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+      try {
+          const response = await fetch(apiUrl, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload)
+          });
+
+          if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response;
+      } catch (error) {
+          if (retryCount < MAX_RETRIES) {
+              const delay = initialDelay * Math.pow(2, retryCount) + Math.random() * 500;
+              await new Promise(resolve => setTimeout(resolve, delay));
+              return generateContentWithRetry(payload, retryCount + 1);
+          }
+          throw error;
+      }
+  };
+
 
   // Handle sending the message to the API Route
   const handleSend = async (e) => {
@@ -43,38 +121,92 @@ const App = () => {
 
     // Add user message to state
     setMessages(prev => [...prev, { role: 'user', content: userMessage }]);
+    
+    // --- API Payload with JSON Schema ---
+    const systemPrompt = "You are a world-class expert on ONDC policies. Based only on the provided context, extract the specific rules, laws, and compliance requirements related to the user's query. Format your output strictly as a JSON array of compliance categories and their detailed checklist items. DO NOT add any conversational text, preamble, or markdown outside of the JSON block.";
+
+    const payload = {
+        contents: [{ parts: [{ text: userMessage }] }],
+        tools: [{ "google_search": {} }],
+        systemInstruction: {
+            parts: [{ text: systemPrompt }]
+        },
+        generationConfig: {
+            responseMimeType: "application/json",
+            responseSchema: {
+                type: "ARRAY",
+                items: {
+                    type: "OBJECT",
+                    properties: {
+                        "category_title": { 
+                            "type": "STRING", 
+                            "description": "The major category or section title, e.g., 'Food Safety Laws', 'Legal Metrology Laws'." 
+                        },
+                        "checklist_items": {
+                            "type": "ARRAY",
+                            "items": {
+                                "type": "OBJECT",
+                                "properties": {
+                                    "rule_name": { 
+                                        "type": "STRING", 
+                                        "description": "A concise title for the specific rule, e.g., 'Packaging & Labeling', 'Product Recall'." 
+                                    },
+                                    "compliance_detail": { 
+                                        "type": "STRING", 
+                                        "description": "The detailed action required for compliance, written in clear, actionable language, e.g., 'Contractually ensure sellers comply with Food Safety and Standards (Packaging) Regulations, 2018'." 
+                                    },
+                                    "source_reference": {
+                                        "type": "STRING",
+                                        "description": "The exact source citation from the policy, e.g., 'Compliance Handbook, Section I.1.2, page 39'."
+                                    }
+                                },
+                                "required": ["rule_name", "compliance_detail"]
+                            }
+                        }
+                    },
+                    "required": ["category_title", "checklist_items"]
+                }
+            }
+        }
+    };
+    // --- END API Payload ---
 
     try {
-      // Call the Next.js API route
-      const response = await fetch('/api/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ prompt: userMessage }),
-      });
+      const response = await generateContentWithRetry(payload);
+      const result = await response.json();
+      
+      const candidate = result.candidates?.[0];
+      let assistantContent = "I encountered an issue getting a structured answer. Please try rephrasing your question."; // Default error message
 
-      const data = await response.json();
-
-      if (!response.ok || data.error) {
-        const errorMsg = data.error || 'Failed to get response from API.';
-        setMessages(prev => [...prev, { role: 'assistant', content: `**Error:** ${errorMsg}` }]);
-        console.error("API Error:", data.error);
-        return;
+      if (candidate && candidate.content?.parts?.[0]?.text) {
+        const jsonText = candidate.content.parts[0].text;
+        
+        try {
+          // Attempt to parse the JSON output
+          const parsedJson = JSON.parse(jsonText);
+          assistantContent = parsedJson; // Set content as the structured array
+        } catch (jsonError) {
+          // If parsing fails (model outputted text instead of JSON), display the raw text
+          assistantContent = `**JSON Parsing Failed.** The model returned raw text instead of a structured checklist. Here is the output:\n\n${jsonText}`;
+        }
+      } else {
+         console.error("API Error: Candidates or content missing", result);
       }
 
       // Add assistant response to state
-      setMessages(prev => [...prev, { role: 'assistant', content: data.reply }]);
+      setMessages(prev => [...prev, { role: 'assistant', content: assistantContent }]);
 
     } catch (error) {
-      setMessages(prev => [...prev, { role: 'assistant', content: `**Network Error:** Could not connect to the server.` }]);
+      setMessages(prev => [...prev, { role: 'assistant', content: `**Network Error:** Could not connect to the server or API failed after multiple retries.` }]);
       console.error("Fetch Error:", error);
     } finally {
       setIsLoading(false);
     }
   };
 
-  // The main UI structure replaces st.title, st.chat_input, and st.chat_message
+  // The main UI structure
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center p-4 sm:p-6 font-inter">
+    <div className="min-h-screen bg-gray-50 flex flex-col items-center p-4 sm:p-6 font-sans">
       <header className="w-full max-w-3xl text-center py-6">
         <h1 className="text-4xl font-extrabold text-indigo-700 flex items-center justify-center space-x-2">
           <Bot className="w-8 h-8"/>
