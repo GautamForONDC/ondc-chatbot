@@ -7,7 +7,7 @@
 export const combinedPolicyText = `
 
 
---- FILE: CHAPTER+[6]+Issue+and+Grievance+Management+Policy.pdf ---
+--- DOCUMENT START: CHAPTER 6 Issue and Grievance Management Policy | URL: https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/downloads/governance-and-policies/CHAPTER%2B%5B6%5D%2BIssue%2Band%2BGrievance%2BManagement%2BPolicy.pdf ---
 
  
 1 
@@ -292,7 +292,7 @@ financial services domain
  
  
 
---- FILE: CHAPTER+[8]+Network+Technology+Governance,+Certification+and+Audit.pdf ---
+--- DOCUMENT START: CHAPTER 8 Network Technology Governance, Certification and Audit | URL: https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/downloads/governance-and-policies/CHAPTER+%5B8%5D+Network+Technology+Governance%2C+Certification+and+Audit.pdf ---
 
  
 CHAPTER [8]: NETWORK TECHNOLOGY GOVERNANCE, CERTIFICATION AND AUDIT 
@@ -428,7 +428,8 @@ related to ONDC operations
 services domain 
  
 
---- FILE: CHAPTER-[1-Onboarding-Complianc-Requirements-and-Certification-Requirements.pdf ---
+--- FILE: Chapter 1: Onboarding, compliance requirements and certification requirements | URL: https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/downloads/governance-and-policies/CHAPTER-%5B1-Onboarding-Complianc-Requirements-and-Certification-Requirements.pdf ---
+---
 
  
 CHAPTER [1]: ONBOARDING, COMPLIANCE REQUIREMENTS AND CERTIFICATION 
@@ -685,7 +686,9 @@ influence in clause 1.1 (iii)
  
  
 
---- FILE: CHAPTER-[3]-Commercial+Model.pdf ---
+--- FILE: Chapter 3 Commercial Model | URL: https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/downloads/governance-and-policies/CHAPTER-%5B3%5D-Commercial%2BModel.pdf ---
+---
+
 
  
 CHAPTER [3]: COMMERCIAL MODEL  
@@ -861,8 +864,8 @@ differ in financial services domain
  
  
  
-
---- FILE: CHAPTER-[4]-Code-of-Conduct-Ethics.pdf ---
+--- FILE: Chapter 4 Code of Conduct & Ethics | URL: https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/downloads/governance-and-policies/CHAPTER-%5B4%5D-Code-of-Conduct-Ethics.pdf ---
+---
 
  
 Chapter [4]: CODE OF CONDUCT & ETHICS 
@@ -1015,7 +1018,7 @@ KMPs
  
  
 
---- FILE: chapter_2__business_rules_v2.1.pdf ---
+--- FILE: Chapter 2 Business Rules | URL: https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/res/daea2fs3n/image/upload/ondc-website/files/chapter_2__business_rules_v2.1.pdf ---
 
  
 1 
@@ -1401,7 +1404,7 @@ applicable to participants operating in retail domain
  
  
 
---- FILE: chapter_5_ branding_guidelines _ 01may2024.pdf ---
+--- FILE: Chapter 5 Branding Guidelines | URL: https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/downloads/marketing-materials/chapter_5_%20branding_guidelines%20_%2001may2024.pdf ---
 
  
 1 
@@ -1663,7 +1666,7 @@ provided that the Participant has explicitly shared
 these guidelines with ONDC. 
  
 
---- FILE: chapter_9_final_governance_and_disciplinary_policy.pdf ---
+--- FILE: Chapter 9: Governance and Disciplinary Policy | URL: https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/res/daea2fs3n/image/upload/ondc-website/files/chapter_9_final_governance_and_disciplinary_policy.pdf ---
 
  
 CHAPTER [9]: Governance and Disciplinary Policy 
@@ -2075,7 +2078,7 @@ Authority
  
  
 
---- FILE: chapter_network-data-governance_v1-1.pdf ---
+--- FILE: Chapter 7: Network Data Governance Policy | URL: https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/res/daea2fs3n/image/upload/ondc-website/files/chapter_network-data-governance_v1-1.pdf ---
 
  
 CHAPTER [7]: NETWORK DATA GOVERNANCE 
@@ -2194,7 +2197,7 @@ protection laws;
  
  
 
---- FILE: final_ondc_drafthanbook_all_chapters_2june_2025.pdf ---
+--- FILE: Compliance Handbook for ONDC Network Participants  | URL: https://ondc-static-website-media.s3.dualstack.ap-south-1.amazonaws.com/res/daea2fs3n/image/upload/ondc-website/files/final_ondc_drafthanbook_all_chapters_2june_2025.pdf ---
 
  
   
@@ -10359,7 +10362,2438 @@ any government authority, agency or other official body.
 www.khaitanco.com | © Khaitan & Co 2025 | All Rights Reserved. 
 Ahmedabad  ·  Bengaluru  ·  Chennai   ·   Delhi-NCR   ·   Kolkata   ·   Mumbai  ·   Pune   ·   Singapore 
 
---- FILE: guidelines_for_usage_of_network_participant _01_may_2024_ 01.pdf ---
+--- FILE: ONDC Network Participant Agreement | URL: https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/downloads/resource/final_ondc_network_participant_agreement.pdf ---
+
+ONDC NETWORK PARTICIPANT AGREEMENT
+Version History
+Version Date Description
+0.3 12th May 2022 Released to NPs
+1.0 14th June 2022 - Added reciprocal protections for NPs’ IP- Removed clauses that were repeated- Made the non-disparagement clause less ambiguous- Clarified clauses on liability resulting from unfairtrade practices by Network Participants- Provision for termination on grounds of exposingONDC to liability made less ambiguous- Added indemnification process, and other relatedprovisions on settlement etc.- Removed phone calls as a method to serve notice- Defined the term “Buyer” which has been usedsynonymously with the term “Customer” in otherpolicies
+1.1 28th June 2022 - Removed the reciprocal participation sub-clause inclause 1- Made the non-disparagement clause mutual- Simplified the indemnification process- Made the cessation of use of Marks after terminationof the Agreement mutual- Included Gateways under the definition of NetworkParticipant
+1INTRODUCTION
+This Network Participant Agreement (Agreement) is an electronic record published by OpenNetwork for Digital Commerce (ONDC) under the provisions of the Information Technology Act,2000andtherulesmadethereunder(asapplicable)andshallactasavalidagreementbetweenONDCandthe NetworkParticipants (hereinafter alsoreferredtoas Participant), as definedintheNetworkPolicy published by ONDC. This Agreement together with the Network Policy and TransactionalDocuments shall constitute the entire agreement betweenthe parties inrelationtothissubjectmatter.ONDC is an open network developed on open protocols based on open-source specifications withestablished registries, enabling wide-scale participation by digital commerce ecosystemplayers asprovidedinONDC's NetworkPolicy.TheONDCNetworkisowned,managedandmadeavailablebyONDC, a Section8companyregisteredundertheCompaniesAct,2013.ByutilisingoraccessingtheONDCNetwork, the Participant agrees tobe boundbythetermscontainedinthisAgreementandtheNetworkPolicyas amendedfromtime totime.ThisAgreementshalltakeeffectonthedateonwhichthe Participant’s registration with the ONDC Network is accepted or approved by ONDC.
+1. GENERAL
+1.1 ONDCshall provide access tothe Participants tothe ONDCNetworktoenable transactionsbetween the End Users, and between the Participants in accordance with the terms of thisAgreement, Network Policy and any other policies, specification or guidelines issued byONDC in this regard.
+1.2 The Participant mustmeetthecriteriaaslaiddownintheNetworkPolicyforbeingeligibletoaccess and use the ONDC Network and to register with ONDC.
+1.3 The Participant shall ensure compliance with and shall comply with all obligations andresponsibilities laid out inthe NetworkPolicyandother guidelines, specificationor policiesissued by ONDC from time to time.
+1.4 The Participants shall complywithall requirements under the Applicable Laws, existingandfuture, with regard to and in connection with the services or products offered through theONDC Network.
+2. OBLIGATIONS AND RESPONSIBILITIES OF ONDC
+2.1 ONDCshall provideaccesstotheParticipanttotheONDCNetworkandreasonablyassisttheParticipant in its Interfacing to the ONDC Network. ONDC will endeavour to make theONDC Network available at all times on a best effort basis, however, ONDC does notpromise or guarantee anyuptime tothe Participants. ONDCas a networkfacilitatingentitywill provide a base framework of policies and guidelines for ONDC Network that allParticipants must comply with at all times.
+2.2 ONDCshall alsohave the right tobuildandmaintainthe reputationledgerrankingbasedonthe quality of products and services provided by all Sellers, opting to participate in thereputation ledger, on the basis of data that the Participant may be requested to provide, inaccordance withthe ONDCNetworkPolicy.TheParticipantshallberesponsibleforensuringthe accuracy of data andtakingnecessaryconsents under the Applicable Laws. ONDCshallnot be held liable for any inaccuracies in the data hosted by the reputation ledger.
+23. SERVICE / REGISTRATION FEES
+3.1 In consideration of the services provided and grant of rights under this Agreement, theParticipant shall payONDCa service fee as providedinthe NetworkPolicy.TheParticipantacknowledges that in addition to the service fee, the Participants will be required to payONDC any other fee, as may be determined and notified by ONDC from time to time.
+3.2 The Participant will be requiredtopayandsettle all relatedservice fees andanyotherfeeasprovidedinthe ONDCNetworkPolicy.ServicefeepayablebytheParticipanttoONDCshallbe exclusive of GST and will be charged separately on the service fee payable by theParticipant.
+3.3 The Participant shall be responsible for allofitsexpensesinconnectionwiththisAgreement,unless stated otherwise.
+4. INTELLECTUAL PROPERTY RIGHTS
+4.1 ONDC hereby grants to the Participant a non-exclusive, royalty-free, non-transferable andlimited right, during the termof this Agreement, to use, reproduce and display the ONDCMarks as per the terms andconditions set out inthe NetworkPolicy. The Participant herebygrants toONDCa non-exclusive, worldwide, androyaltyfree licence for thedurationofthisAgreement to use, reproduce and display the Participant’s Marks including on ONDC'sNetwork and website in respect of the endeavours contemplatedwithinthis Agreement andthe Network Policy.
+4.2 Provided that neither party to this agreement will alter any of the provided trademarks,(except to re-size trademarks tothe extent necessaryfor presentation, solongas the relativeproportions of suchtrademarks remainthe same) andwill complywiththe removal requestsas to specific uses of each part.
+4.3 Notwithstanding the foregoing, the Participant must ensure compliance with the ONDCBranding Guidelines, as amended from time to time.
+5. REPRESENTATIONS AND WARRANTIES
+5.1 Each Party represents and warrants to the other Party that:
+5.1.1 it has the fullcorporateright,power,andauthoritytoenterintothisAgreementandtoperform the acts required of it under this Agreement;
+5.1.2 this Agreement will constitute alegal,valid,andbindingobligationofsuchPartythatis enforceable against such Party;
+5.1.3 it has andshallmaintainallnecessarystatutoryandregulatorypermissions,approvalsand permits, that is necessary for the runningandoperationof its establishment forthe conduct of its operations;
+35.1.4 it has and shall maintain all the title and ownership, licence, or right to use, asapplicable, in all the IPRassociatedwithit andthere is noneedfor anypayment orpermission, or authorizationrequiredfromanyother partyorentitytouse,distribute,or otherwise exploit in all manners permitted by this Agreement and/or NetworkPolicy;
+5.1.5 all informationsubmittedbythePartiesistruthful,lawfulandaccurate,asonthedateof this Agreement;
+5.1.6 it has compliedwithorwillensurecompliancewithallconditionsprovidedundertheApplicable Laws inorder toenableittolawfullyenterintoandexerciseitsrightsandperformits obligations underthisAgreement,andtomakethisAgreementadmissibleas evidence;
+5.1.7 the fulfilment or compliance with the terms and provisions hereof, will not conflictwith, or result in a breach of the provisions of any agreement, instrument, order,judgment, decree, statute, law, rule, or regulationtowhichtheyare subject toor theIPRs of anythirdparty, or require anyconsent,approvalorotheractionbyanycourt,tribunal, administrative or Competent Authority; and
+5.1.8 it shall not make any statement to defame or disparage the other Partyor adverselyaffect the other Party’s reputation, except when such statement is truthful and isreasonably necessary for the Party to enforce or defend its rights under thisAgreement, or is required by a court of law, mediator, arbitrator or regulatory orlegislative body with jurisdiction to order the Party to make such statement;E x p l a n a t i o n : Creation, maintenance and publication of the reputation ledger byONDC, or publication of any information or making any disclosures by ONDCinaccordance with the ONDC Network policy shall not constitute defamation ordisparagement under this clause 5.1.8.
+5.2 TheParticipantrepresents and warrants to ONDC that:
+5.2.1 the Participant has an application that is capable of integration with the ONDCNetwork and conforms to the ONDC Specifications;
+5.2.2 it shall not exploit the rights granted under this Agreement in any manner notspecified in this Agreement or the Network Policy and any other policies,specification or guidelines issued by ONDC in this regard; and
+5.2.3 it shall ensure compliance with the Network Policy.
+6. INDEMNIFICATION
+6.1. The Participant agrees tofullyindemnifyandholdharmlessONDCanditsaffiliatesandtheirrespective officers, directors, employees, and agents fromand against anyall direct claims,actions, losses, demands, suits, judgments, decrees, proceedings, damages, costs, expenses,
+4penalties, liabilities (including, without limitation, reasonable legal fees) or causes of action(collectively,Claims) brought against or incurredby ONDC as a result of:
+6.1.1. anyact offraud,wilfulmisconductorgrossnegligencebytheParticipantoranyofitsemployees, officers, agents, service provider or sub-contractors;
+6.1.2. any breach by the Participant of anyof its obligations, covenants, representations orwarranties under this Agreement or the Network Policy;
+6.1.3. any violation by the Participant or any of its employees, officers, agents, serviceprovider or subcontractors of any Applicable Law, rule or regulation;
+6.1.4. anyuse of unfair trade practices bythe Participant, includingbut not limitedtofalseor misleading advertisements during offer, sales, fulfilment, or alleged breach ofrepresentation, or for any personal injury, death or property damage cause by theproduct or service provided by the Participant;
+6.1.5. anyinfringement or unauthoriseduse of ONDCIntellectualPropertyorONDCMarkor ONDC Protocol Specifications by the Participant;
+6.1.6. any losses and damages caused by the Participant’s APIs or App to the ONDCNetwork or other Participants;
+6.1.7. anythird-partyclaims includingclaims byEndUsers or other Participants relatedtoservices and/ or functions that the Participant is liable toperformor provide toEndUsers or other Participants or its service providers under this Agreement or itsagreement with any third-party or End Users or other Participants;
+6.1.8. claims byCompetent Authorityfor Tax, fines, penalties, sanctions or other remediesarising from or in connection with the Participant’s failure to comply with theAgreement, Network Policy or Applicable Laws; or
+6.1.9. in case of any TDS by any Participant inrespect of service fees payable toONDC,any losses suffered by ONDC(including any Tax, expenses including legal cost orother charges) as a result of a failure of the Participant to timely deposit TDS, fileTDS returns, issue TDS certificates or adhere to any other compliances requiredinthis regard under Applicable Law.
+6.2. Indemnification process:
+6.2.1. Inthe eventofanyindemnifiableClaim,ONDCwillpromptlyprovidetheParticipantwith written notice of the Claim, and will notify the Participant within ten (10)business days of the receipt of the written notice relating to the Claim.
+6.2.2. Any indemnification payment due under this Agreement shall be made infull (andwithout deduction for any counterclaim, defence, recoupment, or set-off) by theNetworkParticipant nolater thansixty(60) days after receiptofthewrittennoticeinaccordance with this clause unless objected by the Network Participant in writingwithin fifteen (15) days of receipt of the written notice from ONDC.
+56.2.3. If the Network Participant objects tothe indemnificationinrespect of anyClaimasper Clause 6.2.2 above, then such dispute shall be settled in accordance with theprocedure set out in Clause 9 of this Agreement.
+6.2.4. Any failure to notify the Network Participant as per this clause shall not constitutewaiver of suchClaims but ONDCshallnotbeentitledtoreceiveanyindemnificationwith respect to any additional loss occurred as a result of the failure to give suchnotice within the prescribed time period.
+6.2.5. The NetworkParticipant is herebyauthorisedtohandleanddealwithallsuchClaimscovered under this Agreement.
+6.2.6. The Network Participant shall be entitled to assume the defence of any matter onbehalf of ONDC, at its own Expense, provided written consent has been obtainedfromONDCfor anydefence onbehalfofONDC.TheNetworkParticipantinitssolediscretionshall have the right tosettle, compromiseordefenduntilfinaladjudicationany dispute or alleged liability for which a Claim for indemnification has been made.
+6.2.7. The Participant agrees to cooperate in good faithanduse best efforts toensure thatONDC is indemnified and reimbursed for any and all Claims.
+6.2.8. ONDCwill provide the Participant with all available information knowntoONDCrelating to the Claim, and agrees tocooperate ingoodfaithandprovide anyandallinformation available with it, as required for the defence of any Claim.
+E x p l a n a t i o n : For the purposes of Clause 6, “Expense” shall mean all costs incurred in thedefence of any claim or action brought against ONDC, including lawyers’ fees.
+7. LIMITATION OF LIABILITY
+7.1. ONDC shall not be liable for any charges by any Participant in relation to any of thetransactions executed through the ONDC Network. Prima facie, the transactions on theONDCNetwork will be betweenthe EndUsers, andbetweenthe Participants. Accordingly,any liability for any claims with respect to or arising out of any transaction onthe ONDCNetwork including those raised by any End User will rest withthe contractingparties withrespect tothe transactionandwill be governedbythe terms andconditions of therespectiveParticipant. The Participants shall have no claimagainst ONDCwith respect to any lossesarising out of such disputes and it is hereby agreed that ONDC shall not be liable orresponsible for any such liability incurred by the Participant.
+7.2. ONDCshall not be held responsible or liable for anyloss arisingout of the interruptionordisruption of the ONDC Network.
+7.3. ONDCshall not be held responsible or liable for anyKYC/ AMLnon-compliance byanyParticipants or for anynon-compliance withApplicable Laws or the act of the Participant inrelation to the goods or services offered or sold through the ONDC Network.
+67.4. Unless otherwise expresslyspecifiedinwriting, the ONDCNetworkisprovidedonan‘asis’basis, without any express or implied warranties in respect thereof. It is hereby mutuallyagreed between the Parties that under no circumstances shall ONDC be liable for anydamages or loss whatsoever, whether such damages or loss are direct, indirect, incidental,remote, consequential; or irrespective of whether any claim is based on loss of revenue,interruption of business or any loss of any character or nature whatsoever and whethersustained by the Participant or by any other person, as a result of the operation of thisAgreement.
+7.5. Notwithstanding anything else contained in this Agreement or in any other document, theliabilityof ONDCtothe Participant, if any, or as maybe determinedbyacourtoflaw,shallbe limitedtothe fees paidbythe Participant toONDCunderthisAgreement,inthepastone(1) month preceding the claimtill the date of the incident whichresults inactual loss beingsuffered by the Participant.
+8. TERM AND TERMINATION
+8.1. This Agreement shall commence upon the completion andacceptance of registrationof theParticipant in the ONDCNetwork and shall continue, unless terminatedinaccordance withthis Agreement.
+8.2. ONDC reserves the right to suspend the Participant fromthe ONDCNetwork after a dueprocess prescribed in the Network Policy for reasons as may be provided in the NetworkPolicy from time to time.
+8.3. Either Partymayterminate this Agreement at anytime,withorwithoutcause,upon60days’written notice of termination to the other Party.
+8.4. Without prejudice to other provisions of this Agreement and other rights or remedies toterminate this Agreement, ONDCmayat its sole discretionterminate this Agreement as perthe due process specified in the Network Policy by providing a written notice to Participant if:
+8.4.1. the Participant fails to fully perform any obligation under this Agreement or theNetworkPolicyor violates anypolicyor procedure, providedthattheParticipanthasfailed to remedy such failure or violation withinfifteen(15) days followingwrittennotice from ONDC.
+8.4.2. the Participant commits an offence or engages in any unlawful or unfair businesspractice or fails to comply with Applicable Law.
+8.4.3. there is a material change in or transfer of the Participant’s management,shareholding, ownership, control or business operations, or the Participant becomesaffiliated, throughcommonmanagement, ownership, or control, withanypersonthatis not eligible to be part of ONDC Network;
+8.4.4. the Participant’s actions expose ONDC to any liability, obligation, or violation ofApplicable Law.
+8.4.5. the Participant undergoes an Insolvency Event; or
+78.4.6. immediately, if the Participant (i) discontinuesitsapplication;or(ii)materiallyvariesthe manner in which it offers the application to its End Users; or (iii) offers theapplicationtoEndUsersinamannernotapprovedbyONDC;or(iv)theParticipant’sapplications fails to meet security requirements and threatens safety of the ONDCNetwork; or (v) stops availing the ONDCNetwork and its associated services fortransactions in the ONDC Network.
+8.5. Upon termination of this Agreement:
+8.5.1. All rights and obligations incurred under this Agreement shall cease immediately.
+8.5.2. Termination shall not affect any accrued rights or obligations of the parties.
+8.5.3. The Participant herebypermits ONDCtouse or process all informationstoredintheONDCRegistry, as deemed fit by ONDC, inaccordance withApplicable Laws. Tothis extent, the Participant shall obtainnecessaryconsents under Applicable Lawforsuch continued use of the information by ONDC.
+8.5.4. Each Party shall promptly return or destroythe Confidential Informationrelatingtothe other Party, as may be requested by the other Party.
+8.5.5. The Participant’s account in the ONDCNetwork shall be immediately deactivated,andthe Participant will cease touse or access the ONDCNetwork, ONDCMarksorany related services provided, including but not limitedtooptional tools or featuresprovided by ONDC. Additionally, ONDC will also cease to use any Participant’sMarks upon termination except as provided in the clause 8.5.3 above.
+8.5.6. The Participant will clear any pending payments within 30 days fromthe date oftermination.
+8.5.7. The NetworkParticipantshallnotdiscloseordivulge,eitherdirectlyorindirectly,anyinformation regarding the ONDC Network which is not available on the publicdomain.
+9. GOVERNING LAW AND DISPUTE RESOLUTION
+This Agreement shall be governed by the laws of India for the time being in force. Intheevent ofanydispute,controversyordifferencebetweenthePartiesarisingoutoforrelatingtothis Agreement, includinganydispute relatingtothe validityor existence of this Agreementandanynon-contractualobligationsarisingoutoforinconnectionwiththisAgreementortheNetworkPolicy(Dispute), suchPartyshall be entitledtorefertheDisputetoarbitrationbyanotice to the other Party, to be finallyresolvedinthe manner set out inthe NetworkPolicyandthe rights andobligations of the Parties shall remaininfull force andeffect pendingthefinal award in such arbitration proceeding.
+Prima facie, the transactions on the ONDC Network will be between the End Users, andbetween the Participants. The Participants agrees that ONDCwould not be a party to anydispute arising between the Participants or with the End Users.
+8Subject totheDisputeResolutionchapter,thecourtsinDelhishallhaveexclusivejurisdictionfor any Dispute between Participant and ONDC in reference to this Agreement or theNetwork Policy.
+10. MISCELLANEOUS
+10.1. Assignment: The Participant shall not assign or transfer the whole or any part of thisAgreement or anybenefit, interest, obligation, or liabilityinorunderthisAgreementwithoutthe prior written consent or permission of ONDC. ONDCwill have the rights toassignortransfer this Agreement, inwhole or inpart,includingtherightsandobligationsanddutiesinthis Agreement to any person or entity in case it is legally required under any lawor asdirected by Competent Authority.
+10.2. Force Majeure:NotwithstandinganythingelsecontainedinthisAgreement,ONDCshallnotbe liable for any damages, loss of profit or business, whether direct or indirect, whatsoeverarising out of Force Majeure Events or other similar circumstances, directly or indirectlyaffecting ONDCand/or the ONDCNetwork. Force Majeure Events or other events beyondONDC’s control that causes anyhindrance, delay, or complicationinthe maintenance of theONDCNetwork or related services entitles ONDCtosuspendor limit access tothe ONDCNetwork and related services until further notice.
+10.3. Severability: If any term, provision, or covenant contained in this Agreement or theapplication thereof to any person or circumstances shall, to any extent, be construed to beinvalid or unenforceable in whole or inpart, thensuchterm, provisionor covenant shall beconstruedina manner as topermit its enforceabilityunder the Applicable Lawtothe fullestextent permitted by law. In any case, the remaining provisions of this Agreement or theapplicationthereof toanypersonor circumstances, other thanthose towhichtheyhavebeenheld invalid or unenforceable, shall be deemedtobe severedfromthis Agreement andshallremain in full force and effect.
+10.4. No Waiver: The failure of ONDC to exercise or enforce any right or provision of thisAgreement shall not constitute a waiver of such right or provision.
+10.5. NoImpliedTerms: EachPartyacknowledgesthatnorepresentations,inducements,promisesor agreements, orally or otherwise, have beenmade bythe other Party, or anyone actingonbehalf of the other Party, which are not embodied herein and that pertain to the matterscovered by this Agreement.
+10.6. Amendment: ONDCreserves the right tochange, modify, amend, or updatethisAgreementor NetworkPolicies fromtime totime andsuchamendedprovisions of thisAgreementshallbe effective immediatelyuponbeingpostedonONDC’swebsite.TheParticipant’scontinueduse of the network services will be deemed to signify their acceptance of the amendedprovisions of this Agreement.
+10.7. Survival: The provisions of Clause 4 (Intellectual Property Rights), Clause 5(Representations and Warranties), Clause 6 (Indemnification), Clause 7 (Limitation ofLiability), Clause 8 (Term and Termination), Clause 9 (Governing Law and DisputeResolution) andother representations, warranties, covenants,andprovisionscontainedherein
+9that by their nature survive or are required to supplement the above mentionedClauses formaking them effective, shall survive the expiry or termination of this Agreement.
+10.8. Language: The languageofthisAgreementandalloralandwrittencommunicationrelatedtothis Agreement, including all deliverables, reports and other documents required to besubmitted in accordance with this Agreement, shall be in English.
+10.9. Notice: The Participant must send all notices and other communications relatingtoONDCNetwork by email, the contact us forms, or similar means specifiedbyONDC. ONDCmayalso communicate with the Participant in connection with their platformelectronically andthrough any other media, and the Participant consents to such communications. Forcontractual purposes, the Participant consents to receive such communications through anymode including e-mail. Any notice, demand, or other communication given or made underthis Agreement shallbeinshallbeinwritingandshallbedeemedeffectivelygivenwhensentto the last notifiedaddress by(a) electronic mail onthe date onwhichthe electronic mail issent, or (b) one (1) day after deposit with a nationally recognized overnight courier,specifying next day delivery, with written verification.
+10.10. Relationship: The relationship between ONDC and the Participant is that of independentcontractors dealingat arm's lengthandnothinginthis Agreement shall constitute the Partiesas partners, joint venture, or co-owners, or constitute either Partyas the agent, employee, orrepresentative of the other.
+10ANNEXURE A
+DEFINITIONS
+In this Agreement or the Network Policy, unless the context otherwise requires capitalizedterms shall have the following meanings:
+Applicable Law shall mean any and all laws, including but not limited to the ConsumerProtection Act, 2019, Consumer Protection (E-Commerce) Rules, 2020, InformationTechnology Act, 2000 and rules framed thereunder, Legal Metrology Act, 2009 and rulesframed thereunder, Information Technology (Reasonable Security Practices and Proceduresand Sensitive Personal Data or Information) Rules, 2011, Foreign Exchange Management(Non-Debt Instruments) Rules, 2019, Foreign Direct Investment Policy, other statutes,directives, regulations, decisions, legislations, regulatory rules, orders, judgments, decrees,frameworks, code of practice, guidelines or industry standards as issuedbyGovernment ofIndia, any State Government in India and/or any other statutoryandregulatoryauthorityinIndia from time to time and are applicable to a Party, the services and /or arrangementscovered under the Agreement.
+Applicant means a person as defined in the chapter of the Network Policy titled“Onboarding, compliance requirements and certification requirements”.
+Buyer Side Applications /BuyerAppsmeansallplatformsorapplicationswhichenabletheCustomer to purchase any goods or avail any service on the ONDC Network.
+Competent AuthoritymeansthegovernmentofanycountryandincludestheGovernmentofIndia, or any Central or State Government,; any person, authority or body exercisinggovernmental, political, executive, legislative, quasi-judicial, regulatory, statutory or taxauthorities or administrative functions of or pertaining to government, including anygovernment or local authority,regulatoryauthority,court,tribunalorarbitraltribunal,agency,department, board, commission or instrumentality of India.
+Confidential Informationof eachPartyshallmeananyandallinformationanddatarelatingto Customers, End-Users, Sellers, Service Providers, payment information, documents,software or application or other proprietary material, experience and know-how, dealings,transactions, or affairs of or relatingtosuchPartydisclosedor sharedbysuchPartywiththeother Party in relation to the Agreement, whether or not marked as confidential.
+Customer / Buyer shall mean the registered users of the Buyer App accessingthe ONDCNetwork to purchase any good or avail any service offered by Sellers on the Seller App.
+End User shall include a Customer, Seller or a Service Provider whois registeredwiththerespectiveParticipant.
+Force Majeure Events shall meanevents suchastheoccurrenceofafire,flood,earthquake,embargo, labour dispute, strike, act of sabotage, terrorism, riot, civil unrest, accident, war orthreat of war, act of God or public enemy, pandemic or epidemic or lockdowns or othergovernment actionsoranyothersimilarcausebeyondaParty’sreasonablecontrol,whensuchevent impacts a Party’s obligations to perform its obligations under the Agreement.
+11Gatewayshall meanthe technologyprovider that will ensure discoverabilityofallSellersinthe ONDCNetworkbymulticastingthe searchrequestreceivedfromBuyerApptoallSellerAppandvice-versa, basedoncriteria, includingbut not limitedto, location, availability,andother customer preferences as provided for in the Network Policies of ONDC
+Goods and Service Taxor GSTshall meanthe Taxor cess leviedunder GSTLaws bytheCompetent Authority in the Republic of India on supply of goods or services or both.
+GST Laws shall mean the Central Goods and Services Tax Act, 2017, the relevant StateGoods and Services Tax Act, 2017, the Integrated Goods and Services Tax Act, 2017, therelevant Union Territory GoodandServices TaxAct, 2017andthe Goods andServices Tax(Compensation to States) Act, 2017 and the rules and regulations framed thereunder.
+INRshall mean Indian Rupee.
+Interfacing shall mean the establishing ONDC- API communication of the Participant’ssystems withONDCNetworkbyadheringtoONDCSpecificationstoenabletransactionsonONDC Network and the terms, Interface, Interfaced, Interfacing shall be construedaccordingly.
+Intellectual Property means and includes any and all copyright, script, story, soundrecording, audio-visual recordings, images, pictures, music, lyrics, titles, slogans, and allother artistic, literary, dramatic, vocal andmusical materials, includinganycinematographicfilms or recordings, background score, song elements; trademarks, tradenames, domainnames, service marks, brands, designs, includingall setdesigns,productiondesigns,costumedesigns; goodwill, know-how, concepts, ideas, and all other intellectual property and otherancillary assets as recognised under Applicable Law, and in industry usage or otherwise.
+Intellectual Property Rights or IPRshall mean all past, present, and future rights of thefollowingtypes,whichmayexistorbecreatedunderthelawsofanyjurisdictionintheworld:(a) rights associated with works of authorship, including exclusive exploitation rights,copyrights, moral rights, and mask work rights; (b) trade secret rights; (c) patent andindustrial property rights; (d) trademarks, service marks, logos, andtrade name andproductname rights and similar rights; (e) other proprietary rights in intellectual property of everykind and nature; and (f) rights in or relating to registrations, renewals, extensions,combinations, divisions, andreissues of, andapplications for, anyof the rights referredtoinclauses (a) through (e) of this sentence.
+Insolvency Eventshall mean in relation to a Person,shall mean where:
+1. suchPersonis unable, or is deemedbyanycourt or tribunal ofCompetentAuthorityto be unable, or admits in writing its inability, to pay its debts as they fall due; or
+2. any action, legal proceedings or other procedure or any step is taken in relation to:
+(a) the suspension of payments, moratoriumof any Indebtedness, winding-up,dissolution, administration, provincial supervision, or reorganisation(bywayof a voluntaryarrangement, scheme of arrangement or otherwise) relatingtosuch Person; or
+12(b) the appointment of a receiver, administrative receiver, interim resolutionprofessional, resolution professional, liquidator, official liquidator,administrator, compulsory manager, provincial supervisor, or similar officerin respect of such Person or substantially all of its assets or undertakings; or
+(c) enforcement of any encumbrances created by such Person on its assets orundertakings; or
+(d) the passage of a resolution by the members of the Person to initiate avoluntary liquidation process in relation to the Person; or
+(e) filing of a petition or application for insolvency of the Person before anyCompetent Authority, whichis not dismissedbytheGovernmentalAuthoritywithin 30 days from the date of such filing, or, with respect to a naturalPerson, declaration of bankruptcy of that Person; or
+(f) or any analogous procedure or step is taken in any relevant jurisdiction.
+3. any expropriation, compulsory acquisition, nationalisation, attachment, sequestration,distress, or execution over any assets of such Person is undertaken.
+Network Participants / Participants shall mean the participants on the ONDCNetworkincluding Gateways, Buyer Side Application, Seller Side Applications, NP-ISN, NP-MSN,and NP-BN.
+NetworkParticipant- InventorySeller Node(NP-ISN)isanentitywhoisregisteredontheONDC network and acts as the “seller on record” with respect to the goods and servicesofferedbythemtoanybuyer accessingthe NetworkfromanyNP-BN(definedbelow)fromtheir own inventory which is either fromtheir own production or obtained procured fromother merchants / service providers.
+Network Participant- Market Place Seller Node (NP-MSN) is anentitywhois registeredon the ONDCnetwork and represents itself and acts as the marketplace withrespect tothegoods andservicesofferedbythirdpartymerchants/serviceproviderstoanybuyeraccessingtheNetworkfromanyNP-BN.InthiscasetheNP-MSNwillnotbe“selleronrecord”,butthethird-party merchants/ service providers will be the “seller on record”
+Network Participant –Buyer Node (NP-BN) is anentityregisteredinthe ONDCnetworkandenablesanypersontosearchforandbuyproductsorservicesontheONDCnetworkfromany NP-ISN / NP-MSN.
+Network Policyshall meanthe policyframeworkdevelopedbyONDCinconsultationwithvarious Network Participants to lay out the rules and code of conducts that all NetworkParticipants must ensure compliance with. ONDCmayupdate the saidNetworkPolicyfromtime-to-time.
+ONDC-Application shall mean the Buyer Side Applications and Seller Side ApplicationsdevelopedanddeployedbytheParticipantforprovidingservicesaspartofONDCnetworktotheir clients, or both, as may be applicable.
+13ONDC - Application Programming Interface (ONDC-API) shall mean applicationprogramming interface compliant with ONDC Specifications, including protocols,specifications and related documentation provided by ONDC.
+ONDCMarks shall meanthe relevant trademarks and/or servicemarks,brandnames,tradenames, whether registered or unregistered, owned, or licensed, and any other marks asprovided in writing by ONDC.
+ONDC Network shall mean the open, interoperable network established, facilitated,managed, made available and owned by ONDC for enabling digital commerce.
+ONDCRegistryshall meana digital list continuouslyupdatedandmaintainedbyONDCforthe benefit of the various users with digital access enabled through pend APIs for easyintegration. There would be multiple registries including but not limited to the registry ofParticipants, Policies, Sellers etc.
+ONDC Protocol Specifications shall mean the functional and technical specifications andAPI fortheParticipantsandGatewaysp r o c e d u r e s andprotocolsprescribedbyONDCthatarenecessary toenable transactions onthe ONDCNetwork, whichshall be providedbyONDCto the Participant.
+Participant’s Marks shall meanthe relevant trademarks and/or service marks inrelationtothe Agreement or Network Policy as provided to ONDCbythe Participant inwritingfromtime to time.
+Party shall mean either ONDCor the Participants that enters intothe Agreement andshallcollectively be referred to as theParties.
+Person shall mean any individual, sole proprietorship, partnership, unincorporatedassociation, unincorporated syndicate, unincorporated organisation, body corporate,corporation, company, limited liability partnership, limited liability company, joint venture,Competent Authority, trust or any other entity or organisation and a natural person in hiscapacity as trustee, executor, administrator, or other legal representative.
+Product shall mean any goods or services made available for sale and purchase by theParticipants through ONDC network.
+Seller shall mean any seller registered with a Seller Side Network Participant to offerproducts or services throughONDCnetwork, includingserviceproviderasdefinedundertheConsumer Protection Act, which can be searched for, discovered, and procured by Buyersregistered with Buyer Side Applications.
+Seller Side Applications / Seller App means all platforms or applications of NetworkParticipant NP - ISN/ MSNthat, which allows the sellers to publish their product/ serviceinventory, pricing, andother terms of transactionandenables the sellers or anyotherserviceproviders, including but not limited to logistics service providers, totransact onthe ONDCNetwork.
+Technology Service Providers (TSP) shall include entities who provide a softwareapplication (either stand alone or through cloud) and who do not act or represent as amarketplace tothe potential or actual buyers, but onlyas anoutsourcedsoftware providerto
+14the NP-ISN, NP-MSNor NP-BN. Any other services to the NP-ISN, NP-BNor NP-MSNrelated to their business offered byTSPandprocuredbyNPshall be a private arrangementbetween these parties and will not form a part of ONDC network agreement and policies.
+Taxor Taxationmeans all forms of taxation, impositions, duties, imposts, contributionsandlevies in the nature of taxation including without limitation income tax, transfer taxes,withholding tax, value addedtax, sales tax, central sales tax, service tax, goods andservicestax, customs andexcise duties, otherlegaltransactiontaxes,realestatetaxes,othermunicipaltaxes andduties, andanyother type of taxes andduties, or anyfuturetaxwhichisinlieuof,or supplants or replaces anysuchtaxtogether withanyinterest,penalties,surcharges,cessorfines relating thereto, due, payable, levied, imposed upon or claimed to be owed by anyCompetent Authority and Taxes means all of them.
+Transactional Documents shall mean the Agreement, the Network Policy, the other termsand conditions, any document incorporatedbyreference intoanyof the foregoingincludingany other agreement.
+15
+
+--- FILE: Frequently asked questions on the Network Participant Agreement | URL: https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/downloads/resource/frequently_asked_questions_on_the_network_participant_agreement.pdf ---
+
+Frequently asked questions on the Network Participant Agreement (NPA/NP 
+Agreement) 
+ 
+ 
+ 
+Version History 
+ 
+Version Date Description 
+1.0 28th June 2022 Released with NP Agreement V1.1 
+1.1 29th December 
+2023 
+1. Added clarifications on: (a) how to read 
+the NP Agreement and governance in 
+ONDC Network; and (b) IP related 
+clauses in the NP Agreement 
+2. Restructured the clause to enhance and 
+improve readability 
+ 
+ 
+  1. How to read and interpret the NP Agreement? 
+Open Network for Digital Commerce (ONDC), a Section 8 company under the Companies Act, 2013, is an 
+initiative aimed at promoting open networks for all aspects of the exchange of goods and services over a digital 
+network. In this regard, ONDC manages two aspects: (a) ONDC Protocol - underlying technology or technical 
+standards that enables NPs to interface/communicate with each other, and (b) ONDC Network - means open, 
+interoperable network established, facilitated, managed, made and owned by ONDC for enabling participants to 
+interface/communicate with each other through the ONDC Protocol. The NP Agreement involves recognizing 
+its nature as a means for entities to access the ONDC Network (i.e. interface with other NPs using the ONDC 
+Protocol), similar to user-provider relationships in other network services.  
+Notably, the NP Agreement does not establish a vendor-client relationship between the NP and ONDC. Rather, 
+the NP Agreement grants the entity signing it access to the ONDC Network. To comprehend the NP Agreement 
+effectively, it is helpful to draw an analogy to other network services, such as telecom networks, social 
+networks, or similar network providers. 
+2. How is the ONDC Network Governed? 
+There are three-tiers of rules that govern the conduct of parties to a transaction conducted through the ONDC 
+Network. The three tiers are depicted in Figure below. Governance for each tier of these rules consists of 
+processes for making the rules, 
+processes for administering 
+them and processes for 
+enforcing them. 
+In the ONDC context, the 
+Transaction-level Contract 
+governs the terms of an 
+individual transaction between 
+NPs for the purchase and sale of 
+goods/services, but the ONDC 
+Network Policy governs the 
+general rules of engagement on 
+the Network. Further, this entire 
+construct operates within the 
+confines of applicable laws. 
+These three layers of rules are intended to ensure that participants conduct themselves in a fair, predictable, 
+transparent and consistent manner. 
+ 
+3. What is the ONDC Network Policy? 
+ONDC Network Policy is the compilation of all policies governing the ONDC Network which is developed by 
+ONDC in consultation with various NPs and which lays out rules and code of conduct that must be complied 
+with by NP. It contains the operational details of how the ONDC Network will function, such as the roles and 
+responsibilities of NPs, code of conduct and ethics, governance processes, how transactions will take place etc. 
+The Network Policy is thematically arranged. ONDC Network Policies are available on the ONDC website. 
+While the NPA will be a static document, the Network Policies will evolve and be updated over time as the 
+Network expands and matures. 
+4. What is a Transaction-Level Contract? 
+A Transaction-level Contract is a digitally-signed, machine-readable contract executed through the ONDC 
+Protocol between the Buyer App and Seller App on behalf of the buyer and seller to facilitate purchase and sale 
+of goods/services on Network with respect to one single transaction and covers various reference terms that are 
+typical across commercial contracts and also configurable terms that can be customized by contracting parties. 
+ONDC is not a party to that transaction and does not have visibility on the terms agreed upon by the parties. 
+However, the terms of the contract cannot be in violation of the Network Policy or the NP Agreement overall. 
+5. Why is ONDC asking the NP to indemnify ONDC against claims, but not indemnifying the NP against 
+claims brought against the NP? 
+As stated in answer to Q1, ONDC plays a facilitator role and it does not operate any pieces of infrastructure or 
+any applications or involve itself in any transactions. The only components of the Network for which ONDC is 
+responsible are the ONDC Registry and the ONDC Protocol Specifications. Notably, ONDC has no visibility of 
+transaction-level activity on the ONDC Network. Most data-flows in the ONDC Network are peer-to-peer, 
+meaning the information flows directly between NPs. The only exception is the process of search and discovery 
+which passes through one of the Gateways to perform a look-up on the ONDC Registry.  
+It is worth noting that ONDC Registry look-up may or may not be performed for every transaction. The entries 
+in the ONDC Registry are highly cacheable since they do not change frequently. The only entries in the Registry 
+that have a limited validity period are the NPs’ public keys, and the validity period is available in the Registry 
+itself, which means it is highly predictable. So in practice, NPs can and do cache the Registry data, meaning 
+look-ups at the time of actual transactions are likely to be performed on the cached data. The implication is that 
+ONDC cannot find out about actual 
+searches being conducted.  
+ONDC has to be viewed akin to a utility, 
+such as an electricity distributor, or 
+internet service provider, in its operation 
+of the Registry and as a standard-setting 
+body (such as IETF) with respect to the 
+Protocol. ONDC will not be selling any 
+products or services by itself, or running 
+any promotional offers etc.  
+ONDC merely provides access to the 
+Network. With respect to transactions 
+between users and sellers/service 
+providers on the ONDC Network, it is 
+worth noting that ONDC is not a party to 
+these transactions nor does it have 
+visibility or control over them. Moreover, 
+the use of a participant's IP by ONDC is solely for the purpose of indicating that the entity is onboarded on the 
+ONDC Network. Therefore, the indemnity clause in the NP Agreement is structured taking into account this 
+limited involvement of ONDC.  
+To sum up, ONDC cannot indemnify the NP against any action brought against the NP and/or any loss, damage 
+etc. suffered by NP. Furthermore, given ONDC's not-for-profit status and its non-contributory role in these 
+risks, such contractual provisions are essential for ensuring the effective and responsible functioning of the 
+ONDC Network. 
+6. Why is ONDC asking the NP to indemnify it against third-party claims in relation to the NP’s obligation to 
+provide a product/service (clause 6.1.7) if it doesn’t have privity of contract with the End Users?  
+As stated in the answer to Q 5, ONDC is merely a network enabler. It will not be a party to any transactions on 
+the network. However, apps that transact using the ONDC Network may use ONDC’s Marks etc. Given the 
+unbundled, decentralised nature of the network there might be instances where an NP or an End User raises 
+claims against ONDC for actions and/or omissions that are attributable to another NP on the Network. This is 
+despite the fact that ONDC is neither a party to the transaction nor has any visibility or control over transactions 
+over the ONDC Network. Similarly, it is possible that ONDC may face regulatory or law enforcement actions 
+due to Network Participant’s non-compliance with respective regulatory and statutory obligations. Given that 
+ONDC neither has any control of the interface available to end-users (i.e. buyers/consumers and sellers/service 
+providers) nor is it involved in the transaction, the said clause safeguards ONDC against situations which would 
+otherwise place ONDC in a vulnerable situation on account of breach of the law and/or due to the act or 
+omission of the NP, without any fault on its part. 
+7. Why will ONDC not bear liability for disruptions to the Network? 
+As stated in the answer to Q 5, ONDC is merely a network enabler. The Registry is the only active component 
+of the network that ONDC will operate. The role of the Registry in any given transaction begins and ends with 
+being a reference for the Gateway to look-up Seller NPs that fit the parameters for a given search request. After 
+that point, ONDC is not involved in the transaction - i.e. in the Buyer selecting a seller of choice, confirming an 
+order, making a payment, the respective NPs fulfilling the order etc. For these reasons, ONDC cannot take on 
+liability for losses arising out of disruptions to the Network. It is worth noting that ONDC Registry look-up may 
+or may not be performed for every transaction. The entries in the ONDC Registry are highly cacheable since 
+they do not change frequently. The only entries in the Registry that have a limited validity period are the NPs’ 
+public keys, and the validity period is available in the Registry itself, which means it is highly predictable. So in 
+practice, NPs can and do cache the Registry data, meaning look-ups at the time of actual transactions are likely 
+to be performed on the cached data.  
+Moreover, it is crucial to clarify that ONDC does not manage or operate any physical infrastructure. As 
+explained above, in practice, the entire communication within the ONDC Network operates on a peer-to-peer 
+basis, where information is exchanged digitally without reliance on a central physical infrastructure. This virtual 
+nature ensures that disruptions associated with physical networks, such as maintenance issues or geographical 
+limitations, are nonexistent. The decentralized and digital architecture of ONDC, combined with the peer-to-
+peer communication model, reinforces the rationale behind the liability clause, as disruptions to the network, in 
+the traditional sense, are mitigated by its inherent design. 
+Therefore, the liability clause is drafted keeping in mind ONDC’s involvement in transactions on the ONDC 
+Network. 
+8. Why is the liability for NPs not capped? 
+It is not possible for ONDC to a priori estimate the nature and severity of violations/breach that may occur, or 
+the quantum of claims or damages that may be sought by a third-parties or may be awarded by Courts or 
+consumer protection bodies. Therefore, NPs’ liability is not capped. To mitigate this concern, the indemnity 
+clause has been amended to include only direct claims or damages. It is crucial to note that ONDC operates as a 
+not-for-profit entity. Consequently, ONDC cannot assume the risk associated with network user activities, 
+particularly when it does not contribute to these risks in any manner. 
+9. Why do obligations provided in Clause 10.7 continue post the termination of the NP Agreement? 
+The obligations outlined in Clause 10.7 persist beyond the termination of the NP Agreement for specific 
+reasons. As elucidated earlier, ONDC functions solely as a network enabler and lacks control or visibility into 
+transactions between buyers and sellers. As highlighted in Q1, ONDC essentially operates as a network 
+provider, similar to other network infrastructure services. 
+The extension outlined in Clause 10.7 serves the purpose of addressing potential liabilities arising from certain 
+activities of network users that may not be constrained by statutes of limitation. An example of such activities 
+includes the sharing of criminally proscribed content. Additionally, this provision aligns with the industry 
+practice observed in the terms and conditions provided by other providers of network infrastructure services. 
+10. Will ONDC retain the authority to unilaterally change the provisions of the ONDC Network Policy? No. ONDC is developing a formal governance mechanism for the long-term governance of the ONDC Network, 
+which includes the policy-making aspect. The governance mechanism will give all NPs and/or their 
+representatives adequate opportunity to participate in the policy-making process. It will aim to ensure that the 
+process is transparent and inclusive. The final governance mechanism will be shared with NPs for their 
+feedback as soon as it is ready. 
+11. What is the reputation ledger, how will it function and what data will NPs be required to share for it? 
+The reputation ledger will be a network-wide system for rating Sellers. The ledger itself and the policy 
+governing it are both under development. The design of the ledger and the corresponding policy will be shared 
+with NPs for their feedback before being fully implemented on the ONDC Network as deemed fit by ONDC. 
+12. What are the fees that ONDC will charge? 
+ONDC is a section 8 company. The objectives of ONDC are to be an enabler with minimal infrastructure, and to 
+deepen the adoption of digital commerce, to make it small-business friendly. In line with that overarching 
+vision, the fees that ONDC may charge will be minimal, and limited to what will be necessary to sustain its 
+operations. The details of the fees that may be charged - the quantum of the fees, from when to charge them (if 
+at all) etc - are still under discussion, internally. Once ONDC arrives at a decision on this, all NPs will be 
+informed well in advance what the fee structure (if any) is, and from when it will be applicable. 
+13. How will ONDC Use NP’s Intellectual Property (IP)?? 
+According to Clause 4.1 of the NP Agreement, the NP is granted a non-exclusive, royalty free, non-transferable 
+and limited right to use, reproduce and display the ONDC Mark, contingent upon strict adherence and 
+compliance with the ONDC Branding Guidelines. Likewise, ONDC is granted a non-exclusive, worldwide and 
+royalty free licence to use, reproduce and display the NP’s Mark on its website or related materials for 
+confirming the entity is part of the ONDC Network. 
+It is important to emphasize that ONDC will only use the intellectual property or name shared by the NP for 
+display on its website or related materials. These related materials may encompass announcements on social 
+media, introducing and confirming that the NP is now part of the ONDC Network. 
+14. Does ONDC require the NP to share the IP with which it has no ownership or right to transfer or licence or 
+right to use? 
+No. ONDC will use the mark/name provided by the NP on for confirming that the entity is part of the ONDC 
+Network as outlined in the NP Agreement. Clause 5.1.4 is pivotal in this context, as it seeks representation from 
+a Party establishing the ownership and title, licence, or right to use, as applicable of the mark provided by the 
+NP to ONDC for display on the website. 
+In situations where the NP holds a mere license to sell a brand owner's products and lacks the legal authority in 
+its arrangement with the brand owner to grant ONDC the use of the brand owner's intellectual property (IP), the 
+NP Agreement does not compel the NP to provide licence or right to use the brand owner's IP. It's crucial to 
+note that the interpretation of Clause 5.1.4 should be harmonized with Clause 4.1 of the NP Agreement. 
+Clause 4.1 specifies that ONDC will use the Participant's Marks (in this case, the entity entering into the NP 
+Agreement) on its website or related materials in respect of endeavours contemplated under NP Agreement. 
+Simultaneously, Clause 5.1.4 functions as a representation from the Party to ONDC, affirming ownership and 
+title, licence or right to use, as may be applicable over the mark provided for display on the website. 
+The term 'IPR associated with it' in Clause 5.1.4 should not be considered in isolation but rather in conjunction 
+with Clause 4.1. In the current scenario, the intellectual property rights (IPR) associated with it refer specifically 
+to the logos and name of the entity signing the NP Agreement. To clarify, ONDC will only use the logo/brand 
+name shared by the NP for the designated purpose. 
+15. Will ONDC unilaterally suspend or terminate the NPA in case of any breach? No. In case an NP is found to be in violation/breach of the NPA, the process described in the Network Policy 
+will be followed. A council will be constituted to decide on all cases of breaches that may merit a suspension or 
+termination. The NP will get a fair chance to present their case, and - depending on the nature of the violation - 
+get an opportunity to remedy the violation (where possible). The decision to terminate the NPA will only be 
+taken after the due process. The disciplinary policy - which includes the rules governing the constitution and 
+functioning of the council - is currently under development and will be finalised after consultation with the NPs.  
+16. How will an NP (X) safeguard itself from the acts of commission or omission of another NP (Y) that lead to 
+X not being able to fulfil its obligations under the Transaction-level Contract? 
+The relationship between the NPs will be governed by their transaction level agreement executed through the 
+ONDC Protocol. If NP(Y) fails to fulfil its part of the obligations, then NP(X) will be safeguarded from the acts 
+of NP(Y) as per the terms and conditions in their transaction-level agreement. The Transaction-level  Contract 
+allows NPs to set their offer terms for things like pricing and charges, terms of settlement, terms of payment 
+collection, indemnity clauses, limitation of liability etc. A mechanism for NPs to negotiate on these parameters 
+is also provided for in the ONDC Protocol. ONDC will not, and does not plan to, interfere with this bipartite 
+arrangement between NPs. 
+17. Why are the exceptions to performance due to force majeure events not extended to NPs? 
+ONDC is not availing of any service from the NP. So it cannot suffer damages, loss of profit or business as a 
+result of an NP not being able to perform its responsibilities due to a force majeure event. To protect itself from 
+another NP or End User, the NP may include force majeure exceptions in the terms and conditions it offers to 
+the counterparty NP or End User under Transaction-level Contract. 
+ 
+
+--- FILE: Glossary of terms of the Transaction Level Contract | URL: https://docs.google.com/document/d/1DPztkqv405W_t2o1LDNOL5t8Bv0K2j-s8UMG3v4Og0E/edit?tab=t.0#heading=h.470e8eu7r842 ---
+
+ 
+Glossary  of  terms  of  the  Transaction  Level  Contract  
+ What  is  the  Transaction  Level  Contract  The  prevalent  practice  in  e-commerce  is  for  the  e-commerce  entity  to  enter  into  an  agreement  with  each  user  and  service  provider(s),  and  then  
+all
+ 
+transactions
+ 
+between
+ 
+the
+ 
+parties
+ 
+take
+ 
+place
+ 
+under
+ 
+the
+ 
+terms
+ 
+of
+ 
+that
+ 
+agreement.
+ 
+So
+ 
+as
+ 
+an
+ 
+example,
+ 
+a
+ 
+Buyer
+ 
+will
+ 
+agree
+ 
+to
+ 
+the
+ 
+Terms
+ 
+of
+ 
+Use
+ 
+of
+ 
+an
+ 
+online
+ 
+marketplace,
+ 
+the
+ 
+Seller
+ 
+will
+ 
+have
+ 
+been
+ 
+on-boarded
+ 
+onto
+ 
+this
+ 
+marketplace
+ 
+through
+ 
+a
+ 
+merchant
+ 
+on-boarding
+ 
+agreement,
+ 
+and
+ 
+service
+ 
+providers,
+ 
+such
+ 
+as
+ 
+delivery
+ 
+agents
+ 
+will
+ 
+have
+ 
+contracts
+ 
+with
+ 
+the
+ 
+marketplace
+ 
+or
+ 
+the
+ 
+Seller.
+ 
+Each
+ 
+transaction
+ 
+that
+ 
+takes
+ 
+place
+ 
+between
+ 
+the
+ 
+Buyer
+ 
+and
+ 
+Seller,
+ 
+as
+ 
+well
+ 
+as
+ 
+any
+ 
+ancillary
+ 
+transactions
+ 
+(e.g.:
+ 
+pick
+ 
+up
+ 
+and
+ 
+delivery),
+ 
+will
+ 
+take
+ 
+place
+ 
+under
+ 
+the
+ 
+terms
+ 
+of
+ 
+the
+ 
+aforementioned
+ 
+agreements.
+  In  the  ONDC  Network,  Buyer  Apps  and  Seller  Apps  have  no  such  pre-existing  contractual  relationship  at  the  time  of  entering  into  a  transaction.  
+Furthermore,
+ 
+the
+ 
+Buyer
+ 
+has
+ 
+no
+ 
+privity
+ 
+of
+ 
+contract
+ 
+with
+ 
+the
+ 
+Seller
+ 
+App,
+ 
+and
+ 
+the
+ 
+Seller
+ 
+does
+ 
+not
+ 
+have
+ 
+privity
+ 
+of
+ 
+contract
+ 
+with
+ 
+the
+ 
+Buyer
+ 
+App.
+ 
+So,
+ 
+the
+ 
+terms
+ 
+and
+ 
+conditions
+ 
+of
+ 
+each
+ 
+transaction
+ 
+are
+ 
+codified
+ 
+through
+ 
+a
+ 
+digital
+ 
+contract
+ 
+that
+ 
+is
+ 
+created
+ 
+on-the-fly
+ 
+and
+ 
+digitally
+ 
+signed
+ 
+by
+ 
+transacting
+ 
+parties.
+ 
+This
+ 
+contract,
+ 
+executed
+ 
+using
+ 
+the
+ 
+ONDC
+ 
+Protocol
+1
+,
+ 
+contains
+ 
+two
+ 
+sets
+ 
+of
+ 
+terms:
+ 
+(i)
+ 
+the
+ 
+terms
+ 
+of
+ 
+sale
+ 
+between
+ 
+the
+ 
+Buyer
+ 
+and
+ 
+Seller,
+ 
+and
+ 
+(ii)
+ 
+the
+ 
+terms
+ 
+between
+ 
+Buyer
+ 
+App
+ 
+and
+ 
+Seller
+ 
+App
+ 
+for
+ 
+facilitating
+ 
+this
+ 
+sale.
+ 
+If
+ 
+the
+ 
+Seller
+ 
+App
+ 
+or
+ 
+Buyer
+ 
+App
+ 
+(Logistics
+ 
+Buyer)
+ 
+purchases
+ 
+logistics
+ 
+on
+ 
+the
+ 
+Network,
+ 
+the
+ 
+terms
+ 
+will
+ 
+be
+ 
+between
+ 
+the
+ 
+Logistics
+ 
+Buyer
+ 
+and
+ 
+the
+ 
+Logistics
+ 
+Service
+ 
+Provider
+ 
+(Logistics
+ 
+Seller),
+ 
+however,
+ 
+these
+ 
+terms
+ 
+will
+ 
+be
+ 
+part
+ 
+of
+ 
+a
+ 
+separate,
+ 
+linked
+ 
+order,
+ 
+with
+ 
+its
+ 
+own
+ 
+digital
+ 
+contract,
+ 
+with
+ 
+appropr
+ iate  cross-reference.   Purpose  of  this  document  Many  critical  parts  of  the  contractual  arrangement  between  the  Network  Participants  that  are  part  of  a  transaction  are  contained  in  the  digital  
+contract,
+ 
+whose
+ 
+structure
+ 
+is
+ 
+specified
+ 
+in
+ 
+ONDC’s
+ 
+API
+ 
+Specifications
+ 
+(which
+ 
+form
+ 
+one
+ 
+part
+ 
+of
+ 
+the
+ 
+ONDC
+ 
+Protocol).
+ 
+While
+ 
+the
+ 
+structure
+ 
+of
+ 
+the
+ 
+digital
+ 
+contract
+ 
+(i.e.
+ 
+the
+ 
+API
+ 
+Specifications)
+ 
+is
+ 
+human-readable
+ 
+in
+ 
+the
+ 
+strictest
+ 
+sense
+ 
+(in
+ 
+that
+ 
+it
+ 
+is
+ 
+a
+ 
+plain
+ 
+text
+ 
+file,
+ 
+and
+ 
+not
+ 
+machine
+ 
+code),
+ 
+a
+ 
+lay
+ 
+person
+ 
+may
+ 
+not
+ 
+be
+ 
+able
+ 
+to
+ 
+understand
+ 
+it
+ 
+without
+ 
+some
+ 
+assistance.
+ 
+The
+ 
+purpose
+ 
+of
+ 
+this
+ 
+document
+ 
+is
+ 
+to
+ 
+bridge
+ 
+that
+ 
+gap
+ 
+-
+ 
+i.e.
+ 
+to
+ 
+explain
+ 
+the
+ 
+contractual
+ 
+terms
+ 
+that
+ 
+the
+ 
+ONDC
+ 
+Protocol
+ 
+allows
+ 
+Network
+ 
+Participants
+ 
+to
+ 
+define
+ 
+in
+ 
+a
+ 
+systematic
+ 
+way.
+ 
+This
+ 
+document
+ 
+also
+ 
+explains
+ 
+how
+ 
+the
+ 
+Network
+ 
+Participants
+ 
+can
+ 
+utilise
+ 
+the
+ 
+API
+ 
+Specifications
+ 
+to
+ 
+construct
+ 
+contractual
+ 
+terms
+ 
+that
+ 
+they
+ 
+prefer,
+ 
+as
+ 
+well
+ 
+as,
+ 
+how
+ 
+to
+ 
+interpret
+ 
+terms
+ 
+received
+ 
+from
+ 
+another
+ 
+Network
+ 
+Participant.
+ 
+1
+ ONDC  Protocol  means  the  API  Specifications  (based  on  the  Beckn  Protocol)  and  the  associated  process  specifications  developed  and  maintained  by  
+ONDC.
+ 
+Page  1  
+   
+Page  2  
+ 
+I.  Retail  contract  spec  (Food  &  Beverage,  Grocery,  Home  &  Decor,  Beauty  &  Personal  Care,  Electronics)  v1.2.0  
+Term  Attribute  name  in  API  Specification  
+Proposed  by  
+Acceptable  values  
+Interpretation  and  configuration  
+Buyer  App  Fee  
+payment.@ondc/org/buyer_app_finder_fee_type  
+Buyer  App  
+“amount”,  “percent”  
+If  set  to  “amount”  it  means  Buyer  App’s  fee  is  a  flat  amount  in  INR.  If  set  to  “percent”  it  means  the  Buyer  App’s  fee  is  set  as  a  percentage  of  the  Total  Order  Value.  
+payment.@ondc/org/buyer_app_finder_fee_amount  
+Buyer  App  
+Positive  Decimal  Number  
+Quantum  of  the  Buyer  App’s  Fee.  To  be  interpreted  in  connection  with  the  “type”  field  mentioned  above.  For  example ,  let’s  assume  the  value  is  set  at  “5”.  If  the  “type”  is  set  to  “Amount”,  that  means  the  Buyer  App  Fee  is  INR  5.  If  the  “type”  is  set  to  “percent”,  it  means  the  Buyer  App  Fee  is  5%  of  the  Total  Order  Value.  
+Payment  Collector  
+payment.collected_by  
+Either  “BAP”,  “BPP”  If  set  to  “BAP”,  it  means  that  the  Buyer  App  will  collect  payment  from  the  Buyer.  If  set  to  “BPP”,  it  means  that  the  Seller  App  will  collect  payment  from  the  Buyer.  
+Payment  Type  
+payment.type  Either  “ON-ORDER”,  “ON-FULFILLMENT”,  “POST-FULFILLMENT”  
+How  payment  is  going  to  be  collected  from  the  Buyer.  If  this  parameter  is  set  to  “ON-ORDER”,  that  means  it  is  a  pre-paid  order,  i.e.  the  payment  is  collected  at  the  time  of  order  confirmation.  If  this  parameter  is  set  to  “ON-FULFILLMENT”,  that  means  it  is  pay-on-delivery  order,  i.e.  the  payment  is  collected  at  the  time  of  delivering  the  product  to  the  Buyer.  If  this  parameter  is  set  to  “POST-FULFILLMENT”,  that  means  it  is  post  the  order  delivery/service,  i.e.  the  payment  is  collected  post  delivery  of  the  product  to  the  Buyer.  
+Withholding  Amount  
+payment.@ondc/org/withholding_amount  
+Either  Positive  Decimal  Number  
+The  percentage  of  the  total  order  value  that  the  Payment  Collector  will  withhold  till  the  return  window  expires.  This  amount  will  be  settled  if  the  return  period  is  completed  and  the  Buyer  has  not  returned  the  product  in  that  time.  Explanation:  This  is  typically  most  relevant  where  the  order  is  pre-paid  and  the  Buyer  App  is  the  Payment  Collector.  It  is  a  mechanism  to  allow  for  easy  refunds  to  the  Buyer  in  case  of  a  return.  
+Page  3  
+ 
+Term  Attribute  name  in  API  Specification  
+Proposed  by  
+Acceptable  values  
+Interpretation  and  configuration  
+Settlement  Basis  
+payment.@ondc/org/settlement_basis  
+Either  “return_window_expiry”,  “shipment”,  “delivery”  
+The  event  that  will  trigger  settlement  from  the  Payment  Collector  to  counterparty  Network  Participant(s).  If  it  is  set  to  “delivery”,  that  will  mean  settlement  by  the  Payment  Collector  will  be  after  completion  of  delivery.  If  it  is  set  to  “shipment”,  that  will  mean  settlement  by  the  Payment  Collector  will  be  after  the  product  is  successfully  shipped  from  the  seller.  If  it  is  set  to  “return_window_expiry”,  that  will  mean  settlement  by  the  Payment  Collector  will  be  on  the  expiry  of  the  return  window.  
+Settlement  Window  
+payment.@ondc/org/settlement_window  
+Either  Time  period  (ISO8601  format)  
+The  time  period  from  completion  of  the  Settlement  Basis  within  which  the  Payment  Collector  will  settle  with  counterparty  Network  Participant(s).  As  an  example ,  if  the  Settlement  Basis  is  set  as  “Delivery”  and  the  Settlement  Window  is  set  to  7  days,  and  the  Buyer  App  collects  the  payment,  it  means  the  Buyer  App  will  remit  funds  to  the  Seller  App  on  or  before  the  completion  of  the  7th  day  after  successful  delivery,  assuming  the  Buyer  does  not  return  the  product  within  that  time.  ISO8601  duration  notation  is  used  to  specify  the  value  of  the  parameter.  As  an  illustration ,  a  Settlement  Window  of  5  days  after  delivery  can  be  specified  as  “P5D”  (i.e.  period  5  days)  or  “PT120H”  (i.e.  period  120  hours).  
+Settlement  Amount  
+payment.@ondc/org/settlement_details.settlement_amount  
+Either  Positive  Decimal  Number  
+The  amount  that  the  Payment  Collector  will  remit  to  the  counterparty  Network  Participant  for  the  instant  transaction.  For  clarity,  if  the  Buyer  App  is  the  Payment  Collector,  the  Buyer  App  will  deduct  their  fee  from  the  Buyer  Price  and  remit  the  balance  to  the  Seller  App.  If  the  Seller  App  is  the  Payment  Collector,  they  will  remit  the  Buyer  App’s  fees  from  the  Buyer  Price,  deduct  its  own  charges/commission  and  remit  the  rest  to  the  Seller.  The  settlement  with  the  Logistics  Service  Provider  will  follow  this  same  logic  if  either  of  the  Network  Participants  procures  on-network   logistics.  
+Settlement  Type  
+payment.@ondc/org/settlement_details.settlement_type  
+Either  “neft”,  “rtgs”,  “upi”  
+The  Payment  Collector  will  use  the  selected  method  to  remit  the  due  payment  to  the  counterparty  Network  Participant.  To  illustrate,  if  the  Buyer  App  collects  the  payment  and  the  Settlement  Type  is  set  to  “rtgs”,  when  the  settlement  is  due,  the  Buyer  App  will  transfer  the  Seller  App’s  share  of  the  Buyer  Price  to  the  Seller  App’s  account  via  RTGS.   
+Page  4  
+ 
+Term  Attribute  name  in  API  Specification  
+Proposed  by  
+Acceptable  values  
+Interpretation  and  configuration  
+Fulfillment  Type  
+fulfillments[].type  Seller  App  
+“Delivery”,  “Self-Pickup”,  “Return”    
+This  parameter  describes  how  the  order  is  going  to  be  fulfilled.  The  parameter  can  be  configured  for  both  forward  fulfilment  (i.e.  bringing  the  product  from  the  seller  to  the  buyer)  as  well  as  returns.   -  If  the  parameter  is  set  to  “Delivery”  that  means  the  product  will  be  delivered  to  the  address  provided  by  the  Buyer.   -  If  the  parameter  is  set  to  “Self-Pickup”  that  means  the  buyer  must  arrange  to  have  the  product  picked  up.  -  If  the  parameter  is  set  to  “Return”  that  indicates  that  return  has  been  initiated  and  the  product  will  be  picked  up  from  the  buyer.  In  forward  fulfilment,  this  parameter  will  take  the  value  “Delivery”  or  “Self-Pickup”,  it  can  take  the  value  “Return”  only  when  the  order  is  marked  for  return.  
+Fulfillment  TAT  
+fulfillments[].@ondc/org/TAT  
+Either  (usually  Seller  App)  
+Time  period  (ISO8601  format)  [Can  be  a  single  value  or  a  range]  
+This  is  the  turnaround  time  (TAT)  for  fulfilment.  In  the  context  of  forward  fulfilment  (i.e.  bringing  the  product  from  the  seller  to  the  buyer),  if  the  Fulfillment  Type  is  “Delivery”,  the  Fullfilment  TAT  describes  the  promised  time  within  which  the  order  will  be  delivered  to  the  buyer  from  the  time  of  confirmation  of  the  order.  If  the  Fulfillment  Type  is  “Return”,  the  Fullfilment  TAT  describes  the  promised  time  within  which  an  order  marked  for  return  will  be  delivered  back  to  the  seller  after  initiation  of  return.  -  If  a  single  value  is  provided  it  will  mean  that  the  order  will  be  fulfilled  before  the  expiry  of  the  specified  period.  E.g.:  If  it  is  a  single  value  configured  as  “P5D”,  it  means  the  the  order  will  be  delivered  to  the  intended  recipient  (i.e.  buyer  in  case  of  forward  shipping,  and  seller  in  case  of  return)  within  5  days  from  the  time  of  confirmation  (i.e.  confirmation  of  order  by  Buyer  or  acceptance  of  return  by  Seller,  as  applicable)  -  If  a  range  is  provided,  it  will  mean  that  the  order  will  be  delivered  between  the  specified  period.  E.g.:  If  it  is  configured  as  [“P5D”,  “P10D”]  the  order  will  be  delivered  to  the  intended  recipient  after  5  days  but  before  10  days  from  the  confirmation.  
+Fulfillment  Provider  
+fulfillments[].@ondc/org/provider_name  
+Either  (usually  Seller  App)  
+String  (name  of  the  entity)  
+This  attribute  contains  the  name  of  the  entity  that  will  deliver  the  order  to  the  Buyer.  This  attribute  is  populated  only  when  the  Buyer  App  or  Seller  App  purchases  logistics  through  the  ONDC  Network,  to  fulfil  the  order  in  question.  
+Item  Returnability  
+item.@ondc/org/returnable  
+Seller  App  
+true/  false  Whether  the  item  in  question  is  returnable  as  per  the  Seller.  Returnability  is  necessarily  defined  at  the  level  of  item.  If  set  to  “true”  that  means  the  item  is  returnable.  
+Page  5  
+ 
+Term  Attribute  name  in  API  Specification  
+Proposed  by  
+Acceptable  values  
+Interpretation  and  configuration  
+Item  Return  Pick-up  
+item.@ondc/org/seller_pickup_return  
+Seller  App  
+true/  false  In  case  the  item  is  returnable,  whether  the  Seller  (whether  directly  or  through  the  Seller  App)  will  arrange  for  the  item  to  be  picked  up  for  return.  
+Item  Return  Window  
+item.@ondc/org/return_window  
+Seller  App  
+Time  period  (ISO8601  format)  
+The  time  period  from  completion  of  the  delivery  within  which  the  Buyer  may  return  the  item.  The  time  period  follows  the  ISO8601  duration  notation.  As  an  illustration ,  a  return  period  of  5  days  after  delivery  can  be  specified  as  “P5D”  (i.e.  period  5  days)  or  “PT120H”  (i.e.  period  120  hours).  
+Item  Cancellability  
+item.@ondc/org/cancellable  
+Seller  App  
+true/  false  Whether  the  order  for  that  item  can  be  cancelled  after  being  confirmed.  If  set  to  “TRUE”  that  means  the  Seller  allows  the  Buyer  to  cancel  the  order  for  the  item  in  question,  after  confirmation.  
+Limitation  of  Liability  
+order.tags.bpp_terms.max_liability  
+Seller  App  Zero  or  Positive  Decimal  Number  
+max_liability  is  the  maximum  aggregate  liability  of  either  party  expressed  as  multiple  of  the  total  transaction  value,  while  the  max_liability_cap  is  the  maximum  aggregate  liability  expressed  in  Indian  Rupees  (INR).  To  illustrate,  if  the  value  of  max_liability  is  set  to  “2”,  the  total  transaction  value  is  INR  100,  and  max_liability_cap  is  empty,  that  will  mean  the  aggregate  liability  of  either  party  shall  not  be  more  than  INR  200  (i.e.  2  multiplied  by  100).  If  the  max_liability_cap  is  set  as  100,  and  the  max_liability  is  empty,  that  means  the  maximum  aggregate  liability  will  be  INR  100.  If  both,  max_liability_cap  and  max_liability  are  provided,  then  the  maximum  aggregate  liability  will  be  the  lower  of  the  two  amounts.  To  illustrate ,  if  the  max_liability  is  set  to  “2”,  the  total  transaction  value  is  INR  100,  and  the  max_liability_cap  is  set  to  100.  That  will  mean  the  maximum  aggregate  liability  will  be  INR  100  (the  lower  of  INR  200  and  INR  100).  If  neither  max_liability_cap  nor  max_liability  are  provided,  i.e.  both  are  empty,  that  would  mean  the  contract  does  not  have  any  clause  related  to  limitation  of  liability.  Effectively  that  would  mean  the  liability  is  uncapped.  If  max_liability_cap  and  max_liability  are  both  set  to  0  (zero),  that  would  mean  that  both  parties  agree  that  neither  of  them  will  bear  any  liability.  
+order.tags.bpp_terms.max_liability_cap  
+Seller  App  Zero  or  Positive  Decimal  Number  
+Mandatory  Arbitration  
+order.tags.bpp_terms.mandatory_arbitration  
+Seller  App  
+true/  false  If  this  attribute  is  set  to  true,  that  would  mean  both  parties  agree  that  in  case  of  a  dispute,  both  parties  must  resolve  the  dispute  through  arbitration.  
+Page  6  
+ 
+Term  Attribute  name  in  API  Specification  
+Proposed  by  
+Acceptable  values  
+Interpretation  and  configuration  
+Court  Jurisdiction  
+order.tags.bpp_terms.court_jurisdiction  
+Seller  App  
+Pick  a  city  from  a  given  list  of  cities  which  have  a  High  Court  bench  
+The  name  of  the  city  whose  courts  will  have  exclusive  jurisdiction  over  disputes  related  to  this  contract.  The  list  of  options  will  only  contain  Indian  cities  which  have  a  High  Court  bench.  
+Delay  Interest  
+order.tags.bpp_terms.delay_interest  
+Seller  App  
+Positive  Decimal  Number  
+This  is  the  annual  rate  of  interest  that  the  Payment  Collector  will  be  charged  if  they  delay  a  payment  to  the  counterparty  Network  Participant,  calculated  pro  rata  for  each  calendar  day  of  delay.  As  an  example ,  if  the  value  is  set  as  “7.3”,  and  the  amount  of  payment  due  is  INR  1000,  that  will  mean  the  Payment  Collector  will  pay  the  counterparty  Network  Participant  an  interest  of  7.3%  per  annum  (i.e.  INR  100),  calculated  pro  rata  for  each  day  of  delay.  So  if  the  Payment  Collector  delay  was  50  days,  the  total  interest  payable  would  be  INR  10  [calculated  as  1000x(7.3/100)x(50/365)]  
+Static  Terms  intent.tags.bap_terms.static_terms  
+Buyer  App  
+URL  This  will  be  the  URL  of  a  web-page  where  the  standard  Terms  and  Conditions  of  the  Network  Participant  -  which  are  not  covered  in  the  API  Specification  (e.g.:  indemnity)  -  will  be  hosted.  These  terms  will  apply  to  the  transaction,  in  addition  to  the  terms  decided  through  the  ONDC  Protocol.  If  there  is  a  conflict  between  the  terms  decided  through  the  Protocol,  and  the  Static  Terms,  the  terms  decided  through  the  ONDC  Protocol  will  prevail.  Also,  if  there  is  a  conflict  between  the  Static  Terms  and  the  ONDC  Network  Policy  or  the  Static  Terms  and  the  Network  Participant  Agreement,  the  terms  of  the  ONDC  Network  Policy  or  the  Network  Participant  Agreement  (as  the  case  may  be)  will  prevail.   
+Page  7  
+ 
+II.  Logistics  contract  spec  v1.2.0  NOTE-1 :  Logistics  Buyer  can  be  either  the  retail  Buyer  App  or  retail  Seller  App.  In  most  cases,  it  will  be  the  retail  Seller  App,  however  the  protocol  allows  
+retail
+ 
+Buyer
+ 
+Apps
+ 
+to
+ 
+purchase
+ 
+on-network
+ 
+logistics.
+ 
+Therefore,
+ 
+in
+ 
+this
+ 
+table,
+ 
+we
+ 
+use
+ 
+the
+ 
+terms
+ 
+Logistics
+ 
+Buyer
+ 
+and
+ 
+Logistics
+ 
+Service
+ 
+Provider
+ 
+(LSP)
+ NOTE-2 :  When  we  use  the  term  Cash-on-Delivery  or  CoD,  it  means  that  the  LSP  collects  payment  from  the  retail  Buyer.  The  payment  may  not  actually  be  in  
+cash
+ 
+money.
+ 
+It
+ 
+could
+ 
+be
+ 
+through
+ 
+UPI
+ 
+or
+ 
+credit/debit
+ 
+card,
+ 
+depending
+ 
+on
+ 
+what
+ 
+is
+ 
+enabled
+ 
+by
+ 
+the
+ 
+LSP.
+ Term  Attribute  name  in  API  Specification  
+Proposed  by  
+Acceptable  values  
+Interpretation  and  configuration  
+Payment  Collector  
+payment.collected_by  
+Logistics  Buyer  
+“BAP”,  “BPP”  If  set  to  “BAP”,  it  means  that  the  Logistics  Buyer  will  collect  payment  from  the  Buyer.  If  set  to  “BPP”,  it  means  that  the  Logistics  Service  Provider  (LSP)  will  collect  payment  from  the  Buyer  (i.e.  the  payment  will  be  CoD).  The  LSP  must  deposit  the  entire  amount  into  the  Logistics  Buyer’s  account  in  case  of  CoD  payment.  
+CoD  Collection  Amount  
+payment.@ondc/org/collection_amount  
+Logistics  Buyer  
+Positive  Decimal  number  
+The  amount  (in  INR)  to  be  collected  from  the  Buyer,  in  case  the  payment  method  is  CoD.  
+Payment  Type  
+payment.type  Logistics  Buyer  
+“ON-ORDER”,  “ON-FULFILLMENT”  “POST-FULFILLMENT”  
+This  parameter  describes  the  payment  terms  for  the  retail  order  linked  to  this  logistics  order.  If  set  to  “ON-ORDER”  it  means  the  order  is  pre-paid  and  payment  has  already  been  collected  from  the  Buyer.  If  set  to  “ON-FULFILLMENT”  it  means  the  payment  is  to  be  collected  upon  delivery.  If  this  parameter  is  set  to  “POST-FULFILLMENT”,  that  means  it  is  post  completion  of  the  service,  i.e.  the  payment  is  collected  post  delivery  of  the  product  to  the  Buyer.  
+Settlement  Window  
+payment.@ondc/org/settlement_window  
+Either  Time  period  (ISO8601  format)  
+The  time  period  from  completion  of  the  Settlement  Basis  within  which  the  Logistics  Buyer  will  settle  with  the  LSP.  As  an  example ,  if  the  Settlement  Window  is  set  to  7  days,  it  means  the  Logistics  Buyer  will  remit  funds  to  the  LSP  on  or  before  the  completion  of  the  7th  day  after  confirming  the  logistics  order.  ISO8601  duration  notation  is  used  to  specify  the  value  of  the  parameter.  As  an  illustration ,  a  Settlement  Window  of  5  days  after  delivery  can  be  specified  as  “P5D”  (i.e.  period  5  days)  or  “PT120H”  (i.e.  period  120  hours).  
+Settlement  Type  
+Payment.@ondc/org/settlement_details.settlement_type  
+Either  “neft”,  “rtgs”,  “upi”  
+The  Logistics  Buyer  will  use  the  selected  method  to  remit  the  due  payment  to  the  LSP.  To  illustrate,  if  the  Settlement  Type  is  set  to  “rtgs”,  when  the  settlement  is  due,  the  Logistics  Buyer  will  transfer  the  LSP’s  dues  via  RTGS.  
+Page  8  
+ 
+Term  Attribute  name  in  API  Specification  
+Proposed  by  
+Acceptable  values  
+Interpretation  and  configuration  
+Fulfillment  Type  
+fulfillments[].type  Logistics  Buyer  
+"Delivery",  "Return",  "RTO"    
+This  parameter  describes  the  broad  type  of  the  logistics  order.  The  parameter  can  be  used  for  both  forward  fulfilment  (i.e.  bringing  the  product  from  the  seller  to  the  buyer)  as  well  as  returns.   -  If  the  parameter  is  set  to  “Delivery”  that  means  the  order  is  for  forward  shipping,  i.e.  from  the  Seller  to  the  Buyer.  -  If  the  parameter  is  set  to  “RTO”  that  means  the  LSP  is  returning  the  product  to  the  Seller,  due  to  a  failure  to  complete  the  delivery.
+ 2
+ -  If  the  parameter  is  set  to  “Return”  that  means  the  order  is  for  a  reverse  pick-up,  (i.e.  pick-up  from  Buyer  and  delivery  to  Seller),  due  to  a  return  being  requested  by  the  Buyer,  and  accepted  by  the  Seller.  For  clarity,  the  reverse  logistics  order  does  not  necessarily  have  to  be  placed  by  the  same  entity  who  purchased  forward  logistics,  and  neither  does  the  LSP  have  to  be  the  same  as  the  LSP  who  did  forward  logistics.   It  will  be  treated  as  a  fresh  logistics  order.   As  an  example,  the  forward  logistics  may  have  been  purchased  by  the  Seller  App  from  LSP-X,  while  the  reverse  logistics  may  have  been  purchased  by  the  Buyer  App  from  LSP-Y.  
+Declared  value  
+order.@ondc/org/linked_order.item.price.value  
+Logistics  Buyer  
+Positive  Decimal  Number  
+Value  of  the  item  as  declared  by  the  Logistics  Buyer.  This  value  is  read  from  the  linked  order,  i.e.  the  retail  order  for  whose  fulfillment  the  instant  logistics  order  is  being  placed.  The  Logistics  Buyer  would  be  either  the  Buyer  App  or  Seller  App  in  the  linked  order.  
+Delivery  Category  
+category.id  LSP  [“Express  Delivery”,  “Standard  Delivery”,  “Immediate  Delivery”,  “Same  Day  Delivery”,  “Next  Day  Delivery”]  
+Category  of  the  delivery  services  which  the  LSP  is  promising  to  the  Logistics  Buyer.  The  exact  TAT  that  corresponds  to  the  Delivery  Category  will  be  provided  through  the  Delivery  TAT  attribute.  
+2
+ The  reasons  can  include  (but  are  not  limited  to)  the  buyer  rejecting  delivery,  drop  location  being  incorrect,  Buyer  refusing  to  pay  for  a  CoD  order,  and  the  
+LSP
+ 
+refusing
+ 
+to
+ 
+hand
+ 
+over
+ 
+the
+ 
+product
+ 
+as
+ 
+a
+ 
+result
+ 
+etc.
+ 
+Page  9  
+ 
+Term  Attribute  name  in  API  Specification  
+Proposed  by  
+Acceptable  values  
+Interpretation  and  configuration  
+Delivery  TAT  
+category.time  LSP  Time  period  (ISO8601  format)  
+This  is  the  turnaround  time  (TAT)  for  delivery.  In  the  context  of  forward  logistics  (i.e.  bringing  the  product  from  the  Seller  to  the  Buyer),  the  Delivery  TAT  describes  the  maximum  time  within  which  the  order  will  be  delivered  to  the  buyer  from  the  time  of  confirmation  of  the  order.  In  the  case  of  reverse  logistics  (i.e.  returning  a  product  from  the  Buyer  to  the  Seller),  the  Delivery  TAT  describes  the  maximum  time  within  which  the  product  will  be  returned  to  the  Seller  from  initiation  of  the  return.  ISO8601  duration  notation  is  used  to  specify  the  value  of  the  parameter.  As  an  illustration ,  a  Settlement  Window  of  5  days  after  delivery  can  be  specified  as  “P5D”  (i.e.  period  5  days)  or  “PT120H”  (i.e.  period  120  hours).  
+Payload  Weight  
+fulfillment.@ondc/org/payload_details.weight  
+Logistics  Buyer  
+Positive  Decimal  Number  
+Weight  of  the  payload  to  be  transported.  The  weight  can  be  specified  in  grams  or  kilograms.  
+Payload  Dimensions  
+fulfillment.@ondc/org/payload_details.weight  
+Logistics  Buyer  
+Length,  Breadth  and  Height  in  Decimal  Number  
+Dimensions  -  i.e.  length,  breadth  and  height  -  of  the  payload  to  be  transported.  Each  dimension  can  be  specified  in  metres  or  centimetres.  
+Page  10  
+ 
+Term  Attribute  name  in  API  Specification  
+Proposed  by  
+Acceptable  values  
+Interpretation  and  configuration  
+Limitation  of  Liability  
+order.tags.bpp_terms.max_liability  
+LSP  Zero  or  Positive  Decimal  Number  
+max_liability  is  the  maximum  aggregate  liability  of  either  party  expressed  as  multiple  of  the  total  transaction  value,  while  the  max_liability_cap  is  the  maximum  aggregate  liability  expressed  in  Indian  Rupees  (INR).  To  illustrate,  if  the  value  of  max_liability  is  set  to  “2”,  the  total  transaction  value  is  INR  100,  and  max_liability_cap  is  empty,  that  will  mean  the  aggregate  liability  of  either  party  shall  not  be  more  than  INR  200  (i.e.  2  multiplied  by  100).  If  the  max_liability_cap  is  set  as  100,  and  the  max_liability  is  empty,  that  means  the  maximum  aggregate  liability  will  be  INR  100.  If  both,  max_liability_cap  and  max_liability  are  provided,  then  the  maximum  aggregate  liability  will  be  the  lower  of  the  two  amounts.  To  illustrate ,  if  the  max_liability  is  set  to  “2”,  the  total  transaction  value  is  INR  100,  and  the  max_liability_cap  is  set  to  100.  That  will  mean  the  maximum  aggregate  liability  will  be  INR  100  (the  lower  of  INR  200  and  INR  100).  If  neither  max_liability_cap  nor  max_liability  are  provided,  i.e.  both  are  empty,  that  would  mean  the  contract  does  not  have  any  clause  related  to  limitation  of  liability.  Effectively  that  would  mean  the  liability  is  uncapped.  If  max_liability_cap  and  max_liability  are  both  set  to  0  (zero),  that  would  mean  that  both  parties  agree  that  neither  of  them  will  bear  any  liability.  
+order.tags.bpp_terms.max_liability_cap  
+LSP  Zero  or  Positive  Decimal  Number  
+Mandatory  Arbitration  
+order.tags.bpp_terms.mandatory_arbitration  
+LSP  true/false  If  this  attribute  is  set  to  true,  that  would  mean  both  parties  agree  that  in  case  of  a  dispute,  both  parties  must  resolve  the  dispute  through  arbitration.  
+Court  Jurisdiction  
+order.tags.bpp_terms.court_jurisdiction  
+LSP  Pick  a  city  from  a  given  list  of  cities  which  have  a  High  Court  bench  
+The  name  of  the  city  whose  courts  will  have  exclusive  jurisdiction  over  disputes  related  to  this  contract.  The  list  of  options  will  only  contain  cities  which  have  a  High  Court  bench.  
+Page  11  
+ 
+Term  Attribute  name  in  API  Specification  
+Proposed  by  
+Acceptable  values  
+Interpretation  and  configuration  
+Delay  Interest  
+order.tags.bpp_terms.delay_interest  
+LSP  Positive  Decimal  Number  
+This  is  the  annual  rate  of  interest  that  the  Payment  Collector  will  be  charged  if  they  delay  a  payment  to  the  counterparty  Network  Participant,  calculated  pro  rata  for  each  calendar  day  of  delay.  As  an  example ,  if  the  value  is  set  as  “7.3”,  and  the  amount  of  payment  due  is  INR  1000,  that  will  mean  the  Payment  Collector  will  pay  the  counterparty  Network  Participant  an  interest  of  7.3%  per  annum  (i.e.  INR  100),  calculated  pro  rata  for  each  day  of  delay.  So  if  the  Payment  Collector  delay  was  50  days,  the  total  interest  payable  would  be  INR  10  [calculated  as  1000x(7.3/100)x(50/365)]  
+Static  Terms  
+catalog.bpp_descriptor.tags.bpp_terms.static_terms  
+LSP  URL  This  will  be  the  URL  of  a  web-page  where  the  standard  Terms  and  Conditions  of  the  Network  Participant  -  which  are  not  covered  in  the  API  Specification  (e.g.:  indemnity)  -  will  be  hosted.  These  terms  will  apply  to  the  transaction  in  addition  to  the  terms  decided  through  the  ONDC  Protocol.  If  there  is  a  conflict  between  the  terms  decided  through  the  Protocol  and  the  Static  Terms,  the  terms  decided  through  the  ONDC  Protocol  will  prevail.  Also,  if  there  is  a  conflict  between  the  Static  Terms  and  the  ONDC  Network  Policy  or  the  Static  Terms  and  the  Network  Participant  Agreement,  the  terms  of  the  ONDC  Network  Policy  or  the  Network  Participant  Agreement  (as  the  case  may  be)  will  prevail.                
+Page  12  
+ 
+III.  FS  Contract  Specification  -  Credit  v1.2.0   Term  Attribute  name  in  API  Specification  
+Proposed  by  
+Acceptable  values  Interpretation  and  configuration  
+Buyer  App  Fee  
+payment.@ondc/org/buyer_app_finder_fee_type  
+Buyer  App  “amount”,  “percent-  annualized”,  “percent”  
+If  set  to  “amount”  it  means  Buyer  App’s  fee  is  a  flat  amount  in  INR.  If  set  to  “percent”  it  means  Buyer  App’s  fee  is  an  absolute  percentage  of  the  total  loan  amountwhat   If  set  to  “percent-  annualized”  it  means  the  Buyer  App’s  fee  is  set  as  a  percentage  of  the  Total  Loan  Disbursed  for  a  12-month  tenure  loan.   For  example:  Assume  the  Buyer  App  Fees’  value  is  5%   -  For  a  12  month  tenure  loan  the  ‘effective  fees’  paid  by  Seller  App  to  the  Buyer  App  would  be  5%  *  (12  months/  12  months)  i.e  5%  -  For  6  month  tenure  loan  the  ‘effective  fees’  paid  by  Seller  App  to  the  Buyer  App  would  be  5%  *  (6  months/  12  months)  i.e  2.5%  -  For  18  month  tenure  loan  the  ‘effective  fees’  paid  by  Seller  App  to  the  Buyer  App  would  be  5%  *  (18  months/  12  months)  i.e  7.5%  
+payment.@ondc/org/buyer_app_finder_fee_amount  
+Buyer  App  Positive  Decimal  Number  
+Quantum  of  the  Buyer  App’s  Fee.  To  be  interpreted  in  connection  with  the  “type”  field  mentioned  above.  For  example ,  let’s  assume  the  value  is  set  at  “5”.  If  the  “type”  is  set  to  “Amount”,  that  means  the  Buyer  App  Fee  is  INR  5.  If  the  “type”  is  set  to  “percent  -  
+Page  13  
+ 
+annualized”,  it  means  the  Buyer  App  Fee  is  5%  of  the  Total  Order  Value  for  a  12-  month  tenure  loan.  
+Offline  contract  applicability  
+   If  set  to  "true,"  the  offline  bilateral  contract  between  the  buyer  and  the  seller  app  will  supersede  the  transaction-level  contract  (TLC).  TLC  will  be  applicable  if  this  field  is  not  present  or  set  to  false.  
+Payment  Collector  
+payment.collected_by  Either  “BAP”,  “BPP”  If  set  to  “BAP”,  it  means  that  the  Buyer  App  will  collect  processing  fees  if  any  from  the  Buyer.  If  set  to  “BPP”,  it  means  that  the  Seller  App  will  collect  processing  fees  if  any  from  the  Buyer.  
+Settlement  Window  
+payment.@ondc/org/settlement_window  
+Either  Time  period  (ISO8601  format)  
+The  time  period  from  completion  of  the  Settlement  Basis  within  which  the  Payment  Collector  will  settle  with  counterparty  Network  Participant(s).  As  an  illustration ,  a  Settlement  Window  of  5  days  after  loan  disbursal  can  be  specified  as  “P5D”  (i.e.  period  5  days)  or  “PT120H”  (i.e.  period  120  hours).  
+Settlement  Basis   
+payment.@ondc/org/settlement_basis  
+Either   “Delivery”,  “  “return_window_expiry,   “  invoice_receipt”  
+The  event  that  will  trigger  settlement  from  the  Payment  Collector  to  counterparty  Network  Participant(s).   Example:  1.  Upon  confirmation  of  order  delivery,  then  set  this  to  “delivery”   2.  Upon  expiry  of  cancellation/  return  window,  then  set  this  to“return_window_expiry”  3.  Upon  receipt  of  an  invoice  from  the  counterparty,  then  this  to  “invoice_receipt”  
+Page  14  
+ 
+Settlement  Amount  
+payment.@ondc/org/settlement_details.settlement_amount  
+Either  Positive  Decimal  Number  
+The  amount  that  the  Payment  Collector  will  remit  to  the  counterparty  Network  Participant.  For  clarity,  if  the  Buyer  App  is  the  Processing  Fees  collector,  the  Buyer  App  will  deduct  their  Buyer  finder  fees  from  the  Processing  Fees  and  remit  the  balance  to  the  Seller  App.  If  seller  app  is  the  Processing  Fees  collector,  the  Seller  app  will  remit  the  Buyer  Finder  Fees  to  Buyer  App.  
+Settlement  Type  
+payment.@ondc/org/settlement_details.settlement_type  
+Either  “neft”,  “rtgs”,  “upi”  The  Payment  Collector  will  use  the  selected  method  to  remit  the  due  payment  to  the  counterparty  Network  Participant.  To  illustrate,  if  the  Buyer  App  collects  the  payment  and  the  Settlement  Type  is  set  to  “rtgs”,  when  the  settlement  is  due,  the  Buyer  App  will  transfer  the  Seller  App’s  share  of  the  Buyer  Price  to  the  Seller  App’s  account  via  RTGS.  
+Item  Cancellability  
+item.@ondc/org/cancellable Seller  App true/  false Whether  the  loan  can  be  cancelled  after  the  borrower  signs  digital  loan  agreement..  If  set  to  “TRUE”  that  means  the  Seller  allows  the  Buyer  to  cancel  the  order  for  the  item  in  question,  after  confirmation. 
+Cancellation  Window  
+item.@ondc/org/cancellation  Window   
+Seller  App  Time  period  (ISO8601  format)  
+The  time  period  from  the  acceptance  of  loan  offer,  via  the  signing  of  the  digital  agreement  by  the  borrower,  till  when  the  borrower  is  allowed  to  exit  from  the  loan  by  paying  principal  and  proportional  APR  without  any  penalty.  
+Mandatory  Arbitration  
+mandatory_arbitration  Seller  App  true/  false  If  this  attribute  is  set  to  true,  that  would  mean  both  parties  agree  that  in  case  of  a  dispute,  both  parties  must  resolve  the  dispute  through  arbitration.  
+Page  15  
+ 
+Court  Jurisdiction  
+court_jurisdiction  Seller  App  Pick  a  city  from  a  given  list  of  cities  which  have  a  High  Court  bench  
+The  name  of  the  city  whose  courts  will  have  exclusive  jurisdiction  over  disputes  related  to  this  contract.  The  list  of  options  will  only  contain  cities  which  have  a  High  Court  bench.  
+Delay  Interest  
+delay_interest  Seller  App  Positive  Decimal  Number  
+This  is  the  annual  rate  of  interest  that  the  Payment  Collector  will  be  charged  if  they  delay  a  payment  to  the  counterparty  Network  Participant,  calculated  pro  rata  for  each  calendar  day  of  delay.  As  an  example ,  if  the  value  is  set  as  “7.3”,  and  the  amount  of  payment  due  is  INR  1000,  that  will  mean  the  Payment  Collector  will  pay  the  counterparty  Network  Participant  an  interest  of  7.3%  per  annum  (i.e.  INR  100),  calculated  pro  rata  for  each  day  of  delay.  So  if  the  Payment  Collector  delay  was  50  days,  the  total  interest  payable  would  be  INR  10  [calculated  as  1000x(7.3/100)x(50/365)]  
+Static  Terms  static_terms  Either  URL  This  will  be  the  URL  of  a  web-page  where  the  standard  Terms  and  Conditions  of  the  Network  Participant  -  which  are  not  covered  in  the  API  Specification  (e.g.:  indemnity)  -  will  be  hosted.  These  terms  will  apply  to  the  transaction,  in  addition  to  the  terms  decided  through  the  ONDC  Protocol.  If  there  is  a  conflict  between  the  terms  decided  through  the  Protocol,  and  the  Static  Terms,  the  terms  decided  through  the  ONDC  Protocol  will  prevail.  Also,  if  there  is  a  conflict  between  the  Static  Terms  and  the  ONDC  Network  Policy  or  the  Static  Terms  and  the  Network  Participant  Agreement,  the  terms  of  the  ONDC  Network  Policy  or  the  Network  Participant  Agreement  (as  the  case  may  be)  will  prevail.  
+Page  16  
+    
+ 
+  
+IV.  FS  Contract  Specification  -  Insurance  v1.2.0   
+Term  Attribute  name  in  API  Specification/Tag  
+Proposed  by  
+Acceptable  values  
+Interpretation  and  configuration  API  Call  
+Buyer  App  Fee  –  New  Policy  Sale  
+payment.@ondc/org/buyer_app_finder_fee_type  
+ BUYER_FINDER_FEES_PERCENTAGE  BUYER_FINDER_FEES_AMOUNT  
+ 
+Buyer  App  “amount”,  “percent”  
+“Null”  
+If  set  to  “amount”  it  means  Buyer  App’s  fee  is  a  flat  amount  in  INR  paid  upon  the  sale  of  a  new  insurance  policy  via  respective  buyer  app   If  set  to  “percent”  it  means  the  Buyer  App’s  fee  is  set  as  a  percentage  of  the  Total  Premium  Amount  Paid  by  the  customer  upon  the  sale  of  a  new  insurance  policy  via  respective  buyer  app   If  set  to  “Null”  it  means  ‘as  agreed  in  offline  bilateral’  contract  between  buyer  apps  and  the  insurer  
+/Search  
+Page  17  
+ 
+ 
+payment.@ondc/org/buyer_app_finder_fee_amount  
+ BUYER_FINDER_FEES  
+ 
+Buyer  App  Positive  Decimal  Number  
+Quantum  of  the  Buyer  App’s  Fee.  To  be  interpreted  in  connection  with  the  “type”  field  mentioned  above.  For  example ,  let’s  assume  the  value  is  set  at  “5”.  If  the  “type”  is  set  to  “Amount”,  that  means  the  Buyer  App  Fee  is  INR  5.  If  the  “type”  is  set  to  “percent”,  it  means  the  Buyer  App  Fee  is  5%  of  the  Total  Order  Value.  
+/Search  
+Buyer  App  Fee  –  Policy  Renewal  
+  
+  
+  
+Buyer  App  “amount”,  “percent”  
+“  Null”  
+If  set  to  “amount”  it  means  Buyer  App’s  fee  is  a  flat  amount  in  INR  paid  upon  the  renewal  of  an  existing  insurance  policy  via  respective  buyer  app    If  set  to  “percent”  it  means  the  Buyer  App’s  fee  is  set  as  a  percentage  of  the  Total  Premium  Amount  Paid  by  the  customer  upon  the  renewal  of  an  existing  insurance  policy  via  respective  buyer  app   If  set  to  “Null”  it  means  ‘as  agreed  in  offline  bilateral’  contract  between  buyer  apps  and  the  insurer   
+/Search  
+Page  18  
+ 
+  
+  
+  
+  
+Buyer  App  Positive  Decimal  Number  
+Quantum  of  the  Buyer  App’s  Fee.  To  be  interpreted  in  connection  with  the  “type”  field  mentioned  above.  For  example ,  let’s  assume  the  value  is  set  at  “5”.  If  the  “type”  is  set  to  “Amount”,  that  means  the  Buyer  App  Fee  is  INR  5.  If  the  “type”  is  set  to  “percent”,  it  means  the  Buyer  App  Fee  is  5%  of  the  Total  Order  Value.  
+ 
+Settlement  Window  
+payment.@ondc/org/settlement_window  
+ SETTLEMENT_WINDOW  
+ 
+Seller  App  Time  period  
+(ISO8601  format)  
+ 
+ 
+“  Null”  
+ 
+The  time  period  from  completion  of  the  transaction  within  which  the  Payment  Collector  will  settle  with  counterparty  Network  Participant(s).  As  an  illustration ,  a  Settlement  Window  of  5  days  after  policy  disbursal  can  be  specified  as  “P5D”  (i.e.  period  5  days)  or  “PT120H”  (i.e.  period  120  hours)    If  set  to  “Null”  it  means  ‘as  agreed  in  offline  bilateral’  contract  between  buyer  apps  and  the  insurer  .  
+/Search  
+/On_Search  
+Page  19  
+ 
+Settlement  Basis  
+payment.@ondc/org/settlement_basis  
+Seller  App  “Delivery”,  “  “return_window_expiry,  
+“  invoice_receipt”  
+“Null”  
+The  event  that  will  trigger  settlement  from  the  Payment  Collector  to  counterparty  Network  Participant(s).  
+Example:  
+1.  Upon  confirmation  of  order  delivery,  then  set  this  to  “delivery”  
+2.  Upon  expiry  of  cancellation/  return  window,  then  set  this  to“return_window_expiry”  
+3.      Upon  receipt  of  an  invoice  from  the  counterparty,  then  this  to  “invoice_receipt”   4.  If  set  to  “Null”  it  means  ‘as  agreed  in  offline  bilateral’  contract  between  buyer  apps  and  the  insurer    
+/Search  
+/On_Search  
+Settlement  Amount  
+payment.@ondc/org/settlement_details.settlement_amount  
+Seller  App  Positive  Decimal  Number  
+“Null”  
+The  amount  that  the  Payment  Collector  will  remit  to  the  counterparty  Network  Participant  
+If  set  to  “Null”  it  means  ‘as  agreed  in  offline  bilateral’  contract  between  buyer  apps  and  the  insurer.    
+/Init  
+/On_init  
+Page  20  
+ 
+Item  Cancellation  Window  
+ Seller  App  Time  period  
+(ISO8601  format)  
+ 
+ 
+“Null”   
+The  time  period  from  completion  of  the  order  within  which  the  Buyer  may  cancel  the  policy.  The  time  period  follows  the  ISO8601  duration  notation.  As  an  illustration ,  a  cancellation  period  of  5  days  after  delivery  can  be  specified  as  “P5D”  (i.e.  period  5  days)  or  “PT120H”  (i.e.  period  120  hours).    If  set  to  “Null”  it  means  ‘as  agreed  in  offline  bilateral’  contract  between  buyer  apps  and  the  insurer   
+ 
+Mandatory  Arbitration  
+order.tags.bpp_terms.mandatory_arbitration  
+Seller  App  true/  false  
+ 
+“Null”  
+If  this  attribute  is  set  to  true,  that  would  mean  both  parties  agree  that  in  case  of  a  dispute,  both  parties  must  resolve  the  dispute  through  arbitration.   If  set  to  “Null”  it  means  ‘as  agreed  in  offline  bilateral’  contract  between  buyer  apps  and  the  insurer  
+/Search  
+/On_Search  
+Court  Jurisdiction  
+order.tags.bpp_terms.court_jurisdiction  
+Seller  App  Pick  a  city  from  a  given  list  of  cities  which  have  a  High  Court  bench  
+“Null”  
+The  name  of  the  city  whose  courts  will  have  exclusive  jurisdiction  over  disputes  related  to  this  contract.  The  list  of  options  will  only  contain  Indian  cities  which  have  a  High  Court  bench.   If  set  to  “Null”  it  means  ‘as  agreed  in  offline  bilateral’  contract  between  buyer  apps  and  the  insurer  
+ 
+Page  21  
+ 
+ 
+Static  Terms  
+intent.tags.bap_terms.static_terms  Buyer  App  “Null”  
+ If  set  to  “Null”  it  means  ‘as  agreed  in  offline  bilateral’  contract  between  buyer  apps  and  the  insurer   
+ 
+  
+         
+Page  22  
+        
+Page  23  
+
+
+--- FILE: Guidance Note on Static Terms | URL: https://docs.google.com/document/d/1ICITftohKoehn-8og4vB_6L0CoWM0Z4U/edit#heading=h.gjdgxs ---
+
+Guidance
+ 
+Note
+ 
+on
+ 
+Static
+ 
+Terms
+ What  is  the  Transaction  Level  Contract?  The  prevalent  practice  in  e-commerce  is  for  the  e-commerce  entity  to  enter  into  an  agreement  
+with
+ 
+each
+ 
+user
+ 
+and
+ 
+service
+ 
+provider(s),
+ 
+and
+ 
+then
+ 
+all
+ 
+transactions
+ 
+between
+ 
+the
+ 
+parties
+ 
+take
+ 
+place
+ 
+under
+ 
+the
+ 
+terms
+ 
+of
+ 
+that
+ 
+agreement.
+ 
+So
+ 
+as
+ 
+an
+ 
+example,
+ 
+a
+ 
+Buyer
+ 
+will
+ 
+agree
+ 
+to
+ 
+the
+ 
+Terms
+ 
+of
+ 
+Use
+ 
+of
+ 
+an
+ 
+online
+ 
+marketplace,
+ 
+the
+ 
+Seller
+ 
+will
+ 
+have
+ 
+been
+ 
+on-boarded
+ 
+onto
+ 
+this
+ 
+marketplace
+ 
+through
+ 
+a
+ 
+merchant
+ 
+on-boarding
+ 
+agreement,
+ 
+and
+ 
+service
+ 
+providers,
+ 
+such
+ 
+as
+ 
+delivery
+ 
+agents
+ 
+will
+ 
+have
+ 
+contracts
+ 
+with
+ 
+the
+ 
+marketplace
+ 
+or
+ 
+the
+ 
+Seller.
+ 
+Each
+ 
+transaction
+ 
+that
+ 
+takes
+ 
+place
+ 
+between
+ 
+the
+ 
+Buyer
+ 
+and
+ 
+Seller,
+ 
+as
+ 
+well
+ 
+as
+ 
+any
+ 
+ancillary
+ 
+transactions
+ 
+(e.g.:
+ 
+pick
+ 
+up
+ 
+and
+ 
+delivery),
+ 
+will
+ 
+take
+ 
+place
+ 
+under
+ 
+the
+ 
+terms
+ 
+of
+ 
+the
+ 
+aforementioned
+ 
+agreements.
+ In  the  ONDC  Network,  Buyer  Apps  and  Seller  Apps  have  no  such  pre-existing  contractual  
+relationship
+ 
+at
+ 
+the
+ 
+time
+ 
+of
+ 
+entering
+ 
+into
+ 
+a
+ 
+transaction.
+ 
+Furthermore,
+ 
+the
+ 
+Buyer
+ 
+has
+ 
+no
+ 
+privity
+ 
+of
+ 
+contract
+ 
+with
+ 
+the
+ 
+Seller
+ 
+App,
+ 
+and
+ 
+the
+ 
+Seller
+ 
+does
+ 
+not
+ 
+have
+ 
+privity
+ 
+of
+ 
+contract
+ 
+with
+ 
+the
+ 
+Buyer
+ 
+App.
+ 
+So,
+ 
+the
+ 
+terms
+ 
+and
+ 
+conditions
+ 
+of
+ 
+each
+ 
+transaction
+ 
+are
+ 
+codiﬁed
+ 
+through
+ 
+a
+ 
+digital
+ 
+contract
+ 
+that
+ 
+is
+ 
+created
+ 
+on-the-ﬂy
+ 
+and
+ 
+digitally
+ 
+signed
+ 
+by
+ 
+transacting
+ 
+parties.
+ 
+This
+ 
+contract,
+ 
+executed
+ 
+using
+ 
+the
+ 
+ONDC
+ 
+Protocol
+1
+,
+ 
+contains
+ 
+two
+ 
+sets
+ 
+of
+ 
+terms:
+ 
+ (a)  Conﬁgurable  Terms:  these  are  core  operational  obligations  such  as  the  fee  charged  by  
+the
+ 
+Buyer
+ 
+App,
+ 
+party
+ 
+that
+ 
+will
+ 
+handle
+ 
+the
+ 
+delivery
+ 
+and
+ 
+the
+ 
+TAT
+ 
+for
+ 
+delivery
+ 
+of
+ 
+product,
+ 
+and
+ 
+the
+ 
+party
+ 
+that
+ 
+will
+ 
+collect
+ 
+payments
+ 
+from
+ 
+the
+ 
+Buyer.
+ 
+These
+ 
+obligations
+ 
+are
+ 
+dynamic
+ 
+in
+ 
+nature
+ 
+as
+ 
+it
+ 
+will
+ 
+differ
+ 
+from
+ 
+transaction
+ 
+to
+ 
+transaction.
+ 
+In
+ 
+the
+ 
+ONDC
+ 
+Network,
+ 
+these
+ 
+obligations
+ 
+are
+ 
+agreed
+ 
+by
+ 
+the
+ 
+parties
+ 
+mutually
+ 
+through
+ 
+the
+ 
+ONDC
+ 
+Protocol
+ 
+(API
+ Speciﬁcations).  Please  refer  to  the  document  available  here  for  more  details.  and  (b)  Static  terms :  Static  terms  are  the  unchanging  clauses  that  provide  a  standardized  
+framework
+ 
+for
+ 
+each
+ 
+contract,
+ 
+ensuring
+ 
+consistency
+ 
+and
+ 
+clarity.
+ Purpose  of  this  document  ONDC  received  representations  from  several  Network  Participants  regarding  the  need  for  
+standardising
+ 
+static
+ 
+terms.
+ 
+Standardised
+ 
+terms
+ 
+may
+ 
+ensure
+ 
+consistency
+ 
+in
+ 
+the
+ 
+way
+ 
+transactions
+ 
+are
+ 
+conducted
+ 
+across
+ 
+the
+ 
+network.
+ 
+This
+ 
+reduces
+ 
+confusion
+ 
+and
+ 
+ensures
+ 
+that
+ 
+all
+ 
+parties
+ 
+involved
+ 
+are
+ 
+on
+ 
+the
+ 
+same
+ 
+page.
+ To  this  end,  ONDC  has  created  a  Model  Static  Terms  that  includes  clauses  related  to:  1.  Representation  and  Warranties  2.  Fees,  Payments  and  Invoicing  3.  Indemnity  4.  Data  Protection  5.  Conﬁdential  Information  6.  Intellectual  Property  7.  Performance  obligations  8.  Governing  law  and  dispute  resolution  9.  Category  speciﬁc  terms  
+1
+ ONDC  Protocol  means  the  API  Speciﬁcations  (based  on  the  Beckn  Protocol)  and  the  associated  
+process
+ 
+speciﬁcations
+ 
+developed
+ 
+and
+ 
+maintained
+ 
+by
+ 
+ONDC.
+ Please  note  that  the  Static  terms  along  with  the  dynamic  terms  exchanged  and  agreed  between  
+the
+ 
+parties
+ 
+through
+ 
+the
+ 
+ONDC
+ 
+Protocol
+ 
+will
+ 
+govern
+ 
+the
+ 
+legal
+ 
+relationship
+ 
+between
+ 
+the
+ 
+Network
+ 
+Participants
+ 
+in
+ 
+a
+ 
+transaction.
+ 
+Therefore,
+ 
+we
+ 
+suggest
+ 
+following
+ 
+points
+ 
+should
+ 
+be
+ 
+kept
+ 
+in
+ 
+mind
+ 
+while
+ 
+interpreting
+ 
+the
+ 
+clauses
+ 
+provided
+ 
+in
+ 
+the
+ 
+Static
+ 
+Terms:
+ 1.  In  contrast  to  traditional  contracts  that  are  ongoing  in  nature  with  a  predetermined  
+tenure,
+ 
+TLC
+ 
+on
+ 
+the
+ 
+ONDC
+ 
+Network
+ 
+will
+ 
+be
+ 
+an
+ 
+event
+ 
+speciﬁc
+ 
+contract.
+ 
+To
+ 
+put
+ 
+it
+ 
+differently,
+ 
+NPs
+ 
+will
+ 
+enter
+ 
+into
+ 
+a
+ 
+contract
+ 
+to
+ 
+fulﬁl
+ 
+a
+ 
+speciﬁc
+ 
+Order.
+ 2.  Holistic  understanding  of  terms  and  conditions  agreed  under  the  TLC  will  be  conditions  
+agreed
+ 
+by
+ 
+the
+ 
+parties
+ 
+under
+ 
+conﬁgurable
+ 
+terms
+ 
+and
+ 
+static
+ 
+terms.
+ 
+  How  are  Static  Terms  different  from  the  NP  agreement,  ONDC  Network  Policy  and  
+Disclosures
+ 
+made
+ 
+by
+ 
+Network
+ 
+Participants?
+ The  Static  terms  are  the  standardised  clauses  of  the  Transaction-level  contract,  which  will  
+cover
+ 
+the
+ 
+terms
+ 
+and
+ 
+conditions
+ 
+which
+ 
+are
+ 
+not
+ 
+captured
+ 
+over
+ 
+the
+ 
+APIs.
+ 
+Such
+ 
+terms
+ 
+include
+ 
+clauses
+ 
+related
+ 
+Representation
+ 
+and
+ 
+Warranties,
+ 
+Indemnity,
+ 
+Conﬁdentiality,
+ 
+Intellectual
+ 
+Property,
+ 
+Performance
+ 
+obligations,
+ 
+Handling
+ 
+of
+ 
+customer
+ 
+grievances
+ 
+etc.
+ 
+These
+ 
+terms
+ 
+only
+ 
+come
+ 
+into
+ 
+effect
+ 
+after
+ 
+Network
+ 
+Participants
+ 
+have
+ 
+agreed
+ 
+to
+ 
+an
+ 
+order
+ 
+i.e
+ 
+after
+ 
+a
+ 
+Buyer
+ 
+App
+ 
+has
+ 
+sent
+ 
+an
+ 
+ACK
+ 
+to
+ 
+an
+ 
+on_conﬁrm
+ 
+call.
+ The  diagram  below  will  help  you  understand  the  difference  between  Transaction-level  
+contract,
+ 
+Network
+ 
+Participant
+ 
+Agreement,
+ 
+Network
+ 
+Policy
+ 
+and
+ 
+the
+ 
+disclosures
+ 
+by
+ 
+Network
+ 
+Participants
+ 
+    
+
+
+--- FILE: Guidelines for usage of Network Participant’s Mark by ONDC | URL: https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/downloads/notifications/guidelines_for_usage_of_network_participant%20_01_may_2024_%2001.pdf ---
 
 GuidelinesforusageofNetworkParticipant’sMarkbyONDC
 NotificationNo.:2024/05/01/01Date:01/05/2024
@@ -10386,7 +12820,7 @@ iii. Insertion of Definitions: A new definition has been added defining the Netw
 3. Queries/Concerns
 For any queries, concerns, or requests related to this notification, youmay writetonetwork.policies@ondc.org
 
---- FILE: kybc_requirement_on_msn.pdf ---
+--- FILE: Know Your Business Customer obligations for Marketplace Seller Nodes on ONDC Network | URL: https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/downloads/notifications/kybc_requirement_on_msn.pdf ---
 
 KnowYourBusinessCustomerobligationsforMarketplaceSeller
 NodesonONDCNetwork
@@ -10438,7 +12872,7 @@ certificatesetc.
 Foranyqueries, concerns, orrequestsrelatedtothisnotification, youmaywriteto
 network.policies@ondc.org
 
---- FILE: network_observability_and_open_data_framework_on_ondc_network_v2.pdf ---
+--- FILE: Network Observability and Open Data Framework on ONDC Network | URL: https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/downloads/notifications/network_observability_and_open_data_framework_on_ondc_network_v2.pdf ---
 
 NetworkObservabilityandOpenDataFrameworkonONDC
 Network
@@ -11453,7 +13887,7 @@ c. ONDCshallmakereasonableeffortstorestoretheTransactionLogsand
 ProcessedMetricsofparticipantstotheirpre-incidentstate,ortotheextent
 technicallyfeasible.
 
---- FILE: notification_on_streamlining_inter_np_vendor_registration_post_go_live.pdf ---
+--- FILE: Notification on Streamlining Inter-NP Vendor Registration post go live | URL: https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/downloads/notifications/notification_on_streamlining_inter_np_vendor_registration_post_go_live.pdf ---
 
  
  
@@ -11609,7 +14043,7 @@ you may write to portal-support@ondc.org.
  
  
 
---- FILE: ondc_explainer_deck_on_income_tax_clarification_on_applicability_of_194_o_income_tax_act_in_multi_eco_model_Update.pdf ---
+--- FILE: Guidelines for applicability of Section 194O, Income Tax Act in multi-ECO model | URL: https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/res/daea2fs3n/image/upload/ondc-website/files/ONDC_Guidance_On_Tax/ondc_explainer_deck_on_income_tax_clarification_on_applicability_of_194_o_income_tax_act_in_multi_eco_model_Update.pdf---
 
 CBDT Clariﬁcation 
 Circular No 20/2023 
@@ -11706,7 +14140,7 @@ References
 DISCLAIMER: This document is only for information. It may not be construed as legal or tax advice. The reader is advised to consult a tax expert for speciﬁc advice.
 
 
---- FILE: ondc_note_on_unregistered_and_composition_sellers_1.pdf ---
+--- FILE: GUIDANCE NOTE ON INDIRECT TAX IMPLICATIONS FOR SUPPLY BY UNREGISTERED/COMPOSITION SELLER THROUGH ECO I.E. SELLER APP | URL: https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/res/daea2fs3n/image/upload/ondc-website/files/ONDC_Guidance_On_Tax/ondc_note_on_unregistered_and_composition_sellers_1.pdf ---
 
  
 GUIDANCE NOTE ON INDIRECT TAX 
@@ -13344,7 +15778,7 @@ inform them that they may not rely upon any of our work for any purpose without 
 consent. 
  
 
---- FILE: ONDC_Notification_Disclosures-by-Seller-Apps-for-differential-treatment-to-Buyer-Apps_08July2023.pdf ---
+--- FILE: Disclosures by Seller Apps for differential treatment to Buyer Apps | URL: https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/downloads/notifications/ONDC_Notification_Disclosures-by-Seller-Apps-for-differential-treatment-to-Buyer-Apps_08July2023.pdf ---
 
 DisclosuresbySellerAppsfordifferentialtreatmenttoBuyerApps
 NotificationNo.:2023/07/08/04Date:08/07/2023
@@ -13378,7 +15812,7 @@ Foranyqueries, concerns, orrequestsrelatedtothisnotification, youmaywritetonetwo
 4 
 Chapter2BusinessRules, version1.1
 
---- FILE: ONDC_Notification_Displaying_Seller_App_s_name_to_the_Buyer_08July2023.pdf ---
+--- FILE: Displaying Seller App’s name to the Buyer | URL https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/downloads/notifications/ONDC_Notification_Displaying_Seller_App_s_name_to_the_Buyer_08July2023.pdf ---
 
 DisplayingSellerApp’snametotheBuyer
 NotificationNo.:2023/07/08/05Date:08/07/2023
@@ -13396,7 +15830,7 @@ Foranyqueries, concerns, orrequestsrelatedtothisnotification, youmaywritetonetwo
 1 
 Chapter2BusinessRules, version1.1
 
---- FILE: ondc_notification_network_infrastructure_and_services_development_fee.pdf ---
+--- FILE: ONDC network infrastructure development and services fee | URL: https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/downloads/notifications/ondc_notification_network_infrastructure_and_services_development_fee.pdf ---
 
  
 ONDC network infrastructure development and 
@@ -13527,7 +15961,7 @@ applicability of the new structure.
 In case of any concerns or queries related to this notification please write to us on 
 fees@ondc.org 
 
---- FILE: ONDC_Notification_Providing_Buyers_with_alternatives_to-default_organic_sorting_11July2023.pdf ---
+--- FILE: Providing Buyers with alternatives to default/organic sorting | URL: https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/downloads/notifications/ONDC_Notification_Providing_Buyers_with_alternatives_to-default_organic_sorting_11July2023.pdf ---
 
 ProvidingBuyerswithalternativestodefault/organicsorting
 NotificationNo.:2023/07/11/01Date:11/07/2023
@@ -13581,7 +16015,7 @@ For any queries, concerns, or requests related to this notification, youmay writ
 6 
 Chapter2BusinessRules, version1.1
 
---- FILE: ONDC_Notification_Publishing_information_on_parameters affecting_06June23.pdf ---
+--- FILE: Publishing information on parameters affecting ranking of goods/services or sellers | URL: https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/downloads/notifications/ONDC_Notification_Publishing_information_on_parameters%20affecting_06June23.pdf ---
 
 Publishing information on parameters af fecting ranking of goods/services or sellers 
  Notification No.: 2023/06/06/01 Date:06/06/2023 
@@ -13601,7 +16035,7 @@ Context
  B u y e r A p p s m u s t p u b l i s h t h i s i n f o r m a t i o n o n t h e i r w e b s i t e a n d / o r m o b i l e a p p l i c a t i o n ( a s a p p l i c a b l e ) a n d s h a r e w h e r e t h i s i n f o r m a t i o n i s p u b l i s h e d a n d h o w t h i s i n f o r m a t i o n c a n b e a c c e s s e d o n n e t w o r k . p o l i c i e s @ o n d c . o r g o n o r b e f o r e 9 t h J u n e 2 0 2 3 . 
  P a g e 2 o f 2 
 
---- FILE: Part A - Tax Implications on ONDC Network.pdf ---
+--- FILE: Part A - Tax Implications on ONDC Network | URL: https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/res/daea2fs3n/image/upload/ondc-website/files/ONDC_Guidance_On_Tax/Part%20A%20-%20Tax%20Implications%20on%20ONDC%20Network.pdf ---
 
 Tax Implications on the ONDC Network
 Page 2DISCLAIMER: This document is only for information. It may not be construed as legal or tax advice. The reader is advised to consult a tax expert for specific advice.
@@ -13756,7 +16190,7 @@ Agency) Ops PoC
  
  
 
---- FILE: taxonomy_ondc_network.pdf ---
+--- FILE: Taxonomy | URL: https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/res/daea2fs3n/image/upload/ondc-website/files/taxonomy_ondc_network.pdf ---
 
  
 Taxonomy of Entities and Roles in the ONDC Network 
@@ -13856,4 +16290,5 @@ Disclaimer: The information provided in this table is for general informational 
 herein are indicative. The inclusion or exclusion of any category, entity, or role does not imply endorsement, certification, or validation by ONDC.  Entities participating in 
 the ONDC Network must ensure compliance with all applicable laws, regulations, and ONDC Network Policy. ONDC does not guarantee the accuracy, completeness, or 
 suitability of this table for any specific purpose and shall not be held liable for any decisions or actions taken based on the information provided. Stakeholders are encouraged 
-to refer to the latest ONDC Network Policy. `;
+to refer to the latest ONDC Network Policy. 
+`;

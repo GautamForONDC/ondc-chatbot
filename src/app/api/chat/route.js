@@ -1,55 +1,71 @@
-import { combinedPolicyText } from '@/policy_documents';
-import { NextResponse } from 'next/server'; // Import NextResponse for proper response handling
+import { NextResponse } from 'next/server';
 
-// Note: This API Route uses the Vercel-friendly Edge runtime via the standard Request/Response objects.
-// In a real Next.js project, this file would be located at 'app/api/chat/route.js'.
+// NOTE: This text must be populated by your local script (prepare_policies.py).
+// It contains the combined text of all your ONDC and "Laws of the Land" policy documents.
+// Ensure each document starts with a clear marker like "--- DOCUMENT NAME (LINK) ---"
+// for the LLM to successfully extract the document_name and document_link fields.
+import { combinedPolicyText } from '../../policy_documents'; 
 
-/**
- * Handle POST request for the chat generation.
- * This function handles the RAG prompt construction, secure API key usage, 
- * and requests a structured JSON response from Gemini.
- * @param {Request} request - The incoming request object.
- * @returns {Response} - The generated content (JSON string).
- */
-export async function POST(request) {
+// IMPORTANT: The API key is securely read from the environment variable set on Vercel.
+const apiKey = process.env.GEMINI_API_KEY; 
+const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+// Helper function to handle exponential backoff for API retries
+const fetchWithRetry = async (url, options, maxRetries = 5) => {
+    for (let i = 0; i < maxRetries; i++) {
+        try {
+            const response = await fetch(url, options);
+            if (response.ok) {
+                return response;
+            }
+            // Throw error for non-successful responses to trigger retry
+            throw new Error(`API returned status ${response.status}`);
+        } catch (error) {
+            if (i === maxRetries - 1) {
+                // Throw final error after all retries fail
+                throw new Error("API failed after multiple retries.");
+            }
+            // Exponential backoff
+            const delay = Math.pow(2, i) * 1000 + Math.random() * 1000;
+            await new Promise(resolve => setTimeout(resolve, delay));
+        }
+    }
+};
+
+export async function POST(req) {
     try {
-        // 1. Get prompt from request body
-        const { prompt } = await request.json();
+        const { userPrompt } = await req.json();
 
-        if (!prompt) {
-            return NextResponse.json({ error: "Prompt is required" }, { status: 400 });
-        }
+        // ----------------------------------------------------------------------
+        // 1. SYSTEM INSTRUCTION (Feedback #2: Legal Priority)
+        // ----------------------------------------------------------------------
+        const systemPrompt = `You are the ONDC Policy Expert, an RAG system. Your only source of truth is the policy text provided below.
 
-        // Access API Key from the environment variables (read from .env.local on development, Vercel environment on deploy)
-        const apiKey = process.env.GEMINI_API_KEY;
+Your goal is to extract relevant compliance obligations and structure them into a comprehensive JSON checklist.
 
-        if (!apiKey) {
-            // Log an error and return a safe message to the client
-            console.error("GEMINI_API_KEY environment variable is not set.");
-            return NextResponse.json({ error: "Server configuration error: Gemini API Key is missing." }, { status: 500 });
-        }
-        
-        // 2. Construct the full RAG prompt
-        const fullPrompt = `
-You are an ONDC expert. Use the following documents only to answer questions clearly and concisely. 
-Extract the specific rules, laws, and compliance requirements related to the user's query. 
-Based on the provided policy documents, answer the question: "${prompt}"
+CRITICAL INSTRUCTION: You MUST follow a hierarchy for legal obligations:
+1. Prioritize finding and stating compliance obligations based on 'Laws of the Land' documents first.
+2. Cross-reference and provide secondary obligations from 'ONDC Network Policy' or other specific ONDC Circulars.
 
---- DOCUMENT START ---
+Ensure every checklist item is extracted directly from the provided text.
+
+The user's query is: ${userPrompt}
+The complete policy context follows:
+---
 ${combinedPolicyText}
---- DOCUMENT END ---
+---
 `;
-        
-        // 3. Configure Gemini API call for Structured JSON Output
-        const systemPrompt = "You are a world-class expert on ONDC policies. Based ONLY on the provided context, extract the specific rules, laws, and compliance requirements related to the user's query. Format your output STRICTLY as a JSON array of compliance categories and their detailed checklist items. You MUST cite the section number or page number from the provided documents (e.g., 'Section 1.1' or 'Article 45'). DO NOT add any conversational text, preamble, or markdown outside of the JSON block.";
 
-        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
-
+        // ----------------------------------------------------------------------
+        // 2. GENERATION CONFIG & SCHEMA (Feedback #3 & #4: Expandable/Clickable)
+        // ----------------------------------------------------------------------
         const payload = {
-            contents: [{ parts: [{ text: fullPrompt }] }],
-            systemInstruction: {
-                parts: [{ text: systemPrompt }]
-            },
+            contents: [{ parts: [{ text: userPrompt }] }],
+            systemInstruction: { parts: [{ text: systemPrompt }] },
+            
+            // Tool for grounding (optional, but good for real-time relevance)
+            // tools: [{ "google_search": {} }], 
+
             generationConfig: {
                 responseMimeType: "application/json",
                 responseSchema: {
@@ -70,16 +86,31 @@ ${combinedPolicyText}
                                             "type": "STRING", 
                                             "description": "A concise title for the specific rule, e.g., 'Packaging & Labeling', 'Product Recall'." 
                                         },
-                                        "compliance_detail": { 
+                                        // Feedback #3: New summary field
+                                        "summary": { 
                                             "type": "STRING", 
-                                            "description": "The detailed action required for compliance, written in clear, actionable language." 
+                                            "description": "A concise, single-sentence summary of the compliance point for the initial view." 
                                         },
+                                        // Feedback #3: New detailed field
+                                        "full_compliance_detail": { 
+                                            "type": "STRING", 
+                                            "description": "The detailed, complete explanation of the compliance obligation, reserved for expansion." 
+                                        },
+                                        // Feedback #4: New source citation fields
                                         "source_reference": {
                                             "type": "STRING",
-                                            "description": "The exact source citation from the policy, e.g., 'Section 1.1.1' or 'Article 45'."
+                                            "description": "The exact clause or section citation from the policy, e.g., 'Section 1.1.1' or 'Article 45'."
+                                        },
+                                        "document_name": {
+                                            "type": "STRING",
+                                            "description": "The full name of the source document, e.g., 'ONDC Compliance Handbook V1.0'."
+                                        },
+                                        "document_link": {
+                                            "type": "STRING",
+                                            "description": "The full, clickable URL for the original source document."
                                         }
                                     },
-                                    required: ["rule_name", "compliance_detail"]
+                                    required: ["rule_name", "summary", "full_compliance_detail"]
                                 }
                             }
                         },
@@ -89,43 +120,27 @@ ${combinedPolicyText}
             }
         };
 
-        let responseText = '';
-        const maxRetries = 3;
-        let delay = 1000;
+        const response = await fetchWithRetry(apiUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        });
 
-        for (let attempt = 0; attempt < maxRetries; attempt++) {
-            const response = await fetch(apiUrl, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
-            });
+        const result = await response.json();
 
-            if (response.ok) {
-                const result = await response.json();
-                // The expected output is a JSON STRING within the text part
-                responseText = result.candidates?.[0]?.content?.parts?.[0]?.text || null;
-                if (responseText) {
-                    // Send the raw JSON string back to the client
-                    return NextResponse.json({ reply: responseText }, { status: 200 });
-                }
-                break;
-            } else if (attempt < maxRetries - 1) {
-                // Wait using exponential backoff before retrying
-                await new Promise(resolve => setTimeout(resolve, delay));
-                delay *= 2;
-            } else {
-                const errorBody = await response.text();
-                // Log and throw the error that caused the failure
-                console.error("Gemini API final failure:", errorBody);
-                throw new Error(`Gemini API request failed with status ${response.status}.`);
-            }
+        // Safely extract the JSON string content
+        const jsonText = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+
+        if (!jsonText) {
+            console.error("Gemini API failed to return JSON content:", result);
+            return NextResponse.json({ error: "API response was invalid or empty." }, { status: 500 });
         }
         
-        // If the model returned an empty text response after all retries
-        return NextResponse.json({ error: "Gemini model returned an empty response after retries." }, { status: 500 });
+        // Return the raw JSON string to the frontend for parsing
+        return NextResponse.json({ responseText: jsonText });
 
     } catch (error) {
-        console.error("Chat API Error:", error);
-        return NextResponse.json({ error: `Server-side processing error: ${error.message}` }, { status: 500 });
+        console.error("Error processing request:", error.message);
+        return NextResponse.json({ error: "Network Error: Could not connect to the server or API failed after multiple retries." }, { status: 500 });
     }
 }
