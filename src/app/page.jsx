@@ -1,405 +1,332 @@
 "use client";
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { Send, Loader, ChevronDown, ChevronUp, Link as LinkIcon, AlertTriangle } from 'lucide-react';
 
-// Persona and Category Options
-const PERSONA_OPTIONS = [
-    "Buyer App",
-    "Seller App",
-    "Logistics Service Provider",
-    "Ecosystem Service Provider",
-    "Seller",
-    "General User",
+import { useState, useCallback, useRef, useEffect } from 'react';
+import { Send, CheckCircle, AlertTriangle, MessageSquare, ChevronDown, ChevronUp, Clock, BookOpen, Zap } from 'lucide-react';
+
+const API_ENDPOINT = '/api/chat';
+
+// Define the structure for a compliance item (must match the API response schema)
+const initialComplianceItem = {
+    rule_name: "Compliance Rule",
+    summary: "Brief summary of the rule.",
+    full_compliance_detail: "Detailed explanation of the rule.",
+    source_reference: "Section 1.1",
+    document_name: "ONDC Policy V1.0",
+    document_link: "#",
+};
+
+const initialChatState = {
+    messages: [
+        { id: 1, role: 'system', content: 'Hello! I am the ONDC Policy Expert. Ask me about any compliance obligation or rule based on ONDC policies and Laws of the Land.' }
+    ],
+    response: null,
+    loading: false,
+    error: null,
+    currentQuery: '',
+};
+
+// **UPDATED FREQUENTLY ASKED QUESTIONS**
+const DEFAULT_FAQS = [
+    "What are the legal obligations for a Buyer App in Food & Beverage category?",
+    "What are the obligations for Buyer Apps under ONDC Network Policy?",
+    "What are the obligations for Seller Apps or Logistics Service Providers under ONDC Network Policy?",
+    "Can a seller participate on ONDC if it doesn't have GST registration?",
 ];
 
-const CATEGORY_OPTIONS = [
-    "Food & Beverage",
-    "Grocery",
-    "Fashion",
-    "Electronics",
-    "Mobility",
-    "Financial Services",
-    "Other",
-];
 
-// --- Component to render the structured checklist response ---
+// Component for the main App logic and UI
+export default function App() {
+    const [state, setState] = useState(initialChatState);
+    const chatEndRef = useRef(null);
 
-/**
- * Renders a checklist item, handling the structured JSON output from the API.
- * @param {object} item - The item object containing summary, detail, and citation info.
- */
-const ChecklistItem = ({ item }) => {
-    const [isExpanded, setIsExpanded] = useState(false);
+    // Scrolls to the bottom of the chat area when messages or response change
+    const scrollToBottom = () => {
+        chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    };
 
-    return (
-        <div className="border border-indigo-200/50 rounded-lg p-4 shadow-sm bg-indigo-50/50 mb-3 transition duration-150 ease-in-out">
-            <div className="flex items-start space-x-3">
-                {/* Checklist Icon */}
-                <div className="flex-shrink-0 mt-1">
-                    <svg className="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
+    useEffect(() => {
+        scrollToBottom();
+    }, [state.messages, state.response]);
+
+
+    // Toggles the detail view for a specific checklist item
+    const toggleDetail = useCallback((itemId) => {
+        setState(prevState => {
+            if (!prevState.response) return prevState;
+
+            const updatedResponse = prevState.response.map(item =>
+                item.id === itemId ? { ...item, expanded: !item.expanded } : item
+            );
+            return { ...prevState, response: updatedResponse };
+        });
+    }, []);
+
+    // Handles an FAQ click to populate the input field and submit
+    const handleFAQClick = (query) => {
+        setState(p => ({ ...p, currentQuery: query }));
+        // Automatically submit the query after a slight delay for visual effect
+        setTimeout(() => {
+            handleSubmit(new Event('submit', { bubbles: true, cancelable: true }));
+        }, 100);
+    };
+
+    // Handles the main chat form submission
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const query = state.currentQuery.trim();
+        if (!query || state.loading) return;
+
+        // Since we removed setup, we default persona and category for the API call
+        const defaultPersona = 'Compliance Manager';
+        const defaultCategory = 'General Network Policy';
+        
+        const userMessage = { id: Date.now(), role: 'user', content: query };
+        
+        setState(prevState => ({
+            ...prevState,
+            messages: [...prevState.messages, userMessage],
+            currentQuery: '',
+            loading: true,
+            error: null,
+            response: null, // Clear previous response
+        }));
+
+        try {
+            const response = await fetch(API_ENDPOINT, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ 
+                    query: query, 
+                    // Using default values for the simplified UI
+                    persona: defaultPersona, 
+                    category: defaultCategory 
+                }),
+            });
+
+            const data = await response.json();
+
+            if (!response.ok || data.error) {
+                const errorMessage = data.error || 'Failed to fetch compliance advice from API.';
+                setState(prevState => ({
+                    ...prevState,
+                    loading: false,
+                    error: errorMessage,
+                    messages: [
+                        ...prevState.messages,
+                        { id: Date.now() + 1, role: 'system', content: `Error: ${errorMessage}` }
+                    ]
+                }));
+                return;
+            }
+
+            // Parse the JSON string received from the backend
+            const rawJsonText = data.responseText;
+            let complianceList;
+            
+            try {
+                complianceList = JSON.parse(rawJsonText);
+                // Assign a unique ID and expanded state for the UI
+                complianceList = complianceList.map((item, index) => ({
+                    ...item,
+                    id: index + 1,
+                    expanded: false
+                }));
+            } catch (e) {
+                console.error("Failed to parse JSON response:", e, rawJsonText);
+                setState(prevState => ({
+                    ...prevState,
+                    loading: false,
+                    error: "The AI returned improperly formatted data. Please try refining your query.",
+                    messages: [
+                        ...prevState.messages,
+                        { id: Date.now() + 1, role: 'system', content: `Error: The AI returned improperly formatted data. Please try refining your query.` }
+                    ]
+                }));
+                return;
+            }
+
+            setState(prevState => ({
+                ...prevState,
+                loading: false,
+                response: complianceList,
+            }));
+
+        } catch (error) {
+            console.error("Fetch error:", error);
+            setState(prevState => ({
+                ...prevState,
+                loading: false,
+                error: "Network error: Could not connect to the server.",
+                messages: [
+                    ...prevState.messages,
+                    { id: Date.now() + 1, role: 'system', content: `Network Error: Could not connect to the server.` }
+                ]
+            }));
+        }
+    };
+
+    // --- UI Components ---
+
+    // Component for the CheckList Item
+    const ChecklistItem = ({ item }) => (
+        <div className="border border-gray-200 rounded-xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-xl bg-white">
+            <button
+                className="w-full flex justify-between items-start text-left p-4 focus:outline-none"
+                onClick={() => toggleDetail(item.id)}
+            >
+                <div className="flex items-start flex-1 mr-4">
+                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <div className="ml-3">
+                        <h3 className="font-bold text-gray-800 text-sm leading-tight">{item.rule_name}</h3>
+                        <p className="text-gray-600 text-xs mt-1 italic">{item.summary}</p>
+                    </div>
                 </div>
-                {/* Summary and Document Link */}
-                <div className="flex-grow">
-                    <p className="text-gray-800 font-medium text-base leading-snug break-words">
-                        {item.summary}
-                    </p>
+                {item.expanded ? (
+                    <ChevronUp className="w-5 h-5 text-gray-500" />
+                ) : (
+                    <ChevronDown className="w-5 h-5 text-gray-500" />
+                )}
+            </button>
 
-                    {/* Document Citation */}
-                    {(item.document_name || item.document_link) && (
-                        <div className="mt-2 text-xs text-indigo-600 flex items-center">
-                            <LinkIcon className="h-3 w-3 mr-1" />
-                            <a 
-                                href={item.document_link || '#'} 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
-                                className="font-semibold hover:underline transition-colors"
-                            >
-                                {item.document_name || "Source Document"}
-                            </a>
-                        </div>
-                    )}
-
-                    {/* Expand/Collapse Button */}
-                    <button
-                        onClick={() => setIsExpanded(!isExpanded)}
-                        className="mt-3 text-sm font-semibold text-indigo-700 hover:text-indigo-900 flex items-center transition-colors focus:outline-none"
-                    >
-                        {isExpanded ? "Hide Full Detail" : "Show More Detail"}
-                        {isExpanded ? (
-                            <ChevronUp className="h-4 w-4 ml-1" />
-                        ) : (
-                            <ChevronDown className="h-4 w-4 ml-1" />
+            {item.expanded && (
+                <div className="p-4 pt-0 border-t border-gray-100 bg-gray-50">
+                    <p className="text-gray-700 text-sm mb-3 whitespace-pre-line leading-relaxed">{item.full_compliance_detail}</p>
+                    
+                    <div className="text-xs text-gray-500 border-t border-gray-200 pt-3">
+                        <p className="font-semibold text-gray-700 mt-1 flex items-center">
+                            <BookOpen className="w-4 h-4 mr-1"/> Source Reference:
+                        </p>
+                        <p className="mt-1 ml-5">
+                            <span className="font-medium">Document:</span> {item.document_name} ({item.source_reference})
+                        </p>
+                        {item.document_link && (
+                            <p className="mt-1 ml-5 truncate">
+                                <span className="font-medium">Link:</span> 
+                                <a href={item.document_link} target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-800 underline ml-1">
+                                    {item.document_link}
+                                </a>
+                            </p>
                         )}
-                    </button>
-                </div>
-            </div>
-
-            {/* Expanded Detail */}
-            {isExpanded && (
-                <div className="mt-4 pt-3 border-t border-indigo-200/50">
-                    <p className="text-sm text-gray-600 whitespace-pre-wrap break-words">
-                        {item.full_compliance_detail}
-                    </p>
+                    </div>
                 </div>
             )}
         </div>
     );
-};
 
-// --- Main Chatbot App Component ---
-
-const App = () => {
-    const [isSetupComplete, setIsSetupComplete] = useState(false);
-    const [persona, setPersona] = useState(PERSONA_OPTIONS[0]);
-    const [category, setCategory] = useState(CATEGORY_OPTIONS[0]);
-
-    const [input, setInput] = useState('');
-    const [messages, setMessages] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
-
-    const messageRef = useRef(null);
-
-    // Scroll to bottom of messages whenever the list updates
-    useEffect(() => {
-        if (messageRef.current) {
-            messageRef.current.scrollTop = messageRef.current.scrollHeight;
-        }
-    }, [messages]);
-
-    /**
-     * Handles sending the user message to the API.
-     * @param {string} userQuery - The query string from the input or FAQ button.
-     */
-    const handleSend = useCallback(async (userQuery) => {
-        if (!userQuery.trim() || isLoading) return;
-
-        // 1. Add user message to history
-        const newMessage = { role: 'user', content: userQuery };
-        setMessages(prev => [...prev, newMessage]);
-        setInput('');
-        setIsLoading(true);
-
-        try {
-            // 2. Prepare payload for API
-            const payload = {
-                query: userQuery,
-                persona: persona,
-                category: category,
-            };
-
-            const response = await fetch('/api/chat', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload),
-            });
-
-            if (!response.ok) {
-                // Handle non-200 responses
-                const errorData = await response.json();
-                console.error("API Error:", errorData);
-                const errorMsg = {
-                    role: 'bot',
-                    content: {
-                        type: 'error',
-                        text: `Sorry, I ran into an error while processing your request. Please try again. (Details: ${errorData.error || 'Unknown Error'})`
-                    }
-                };
-                setMessages(prev => [...prev, errorMsg]);
-                return;
-            }
-
-            // 3. Process API response
-            const data = await response.json();
-
-            let botContent;
-            try {
-                // Attempt to parse the structured JSON response
-                botContent = JSON.parse(data.text);
-                // Validate if it's the expected structured format (array of objects)
-                if (!Array.isArray(botContent) || botContent.length === 0 || !botContent[0].summary) {
-                    throw new Error("Response is not the expected structured compliance array.");
-                }
-                botContent = { type: 'structured', checklist: botContent };
-
-            } catch (e) {
-                // If parsing fails, treat it as a standard text response
-                console.warn("Could not parse structured JSON. Falling back to plain text.", e);
-                botContent = { type: 'text', text: data.text };
-            }
-
-            // 4. Add bot response to history
-            setMessages(prev => [...prev, { role: 'bot', content: botContent }]);
-
-        } catch (error) {
-            console.error('Fetch error:', error);
-            const errorMsg = {
-                role: 'bot',
-                content: {
-                    type: 'error',
-                    text: "Network error or general failure. Please check your network connection and API key setup."
-                }
-            };
-            setMessages(prev => [...prev, errorMsg]);
-        } finally {
-            setIsLoading(false);
-        }
-    }, [isLoading, persona, category]);
-
-    // --- Renderer Functions ---
-
-    const renderMessageContent = (message) => {
-        const content = message.content;
-
-        if (content.type === 'structured' && Array.isArray(content.checklist)) {
-            // Structured Checklist Renderer
-            return (
-                <div className="space-y-3">
-                    <p className="font-semibold text-lg text-gray-900 mb-4">
-                        Compliance Checklist for {persona} in the {category} category:
-                    </p>
-                    {content.checklist.map((item, index) => (
-                        <ChecklistItem key={index} item={item} />
-                    ))}
-                    <p className="text-sm text-gray-500 pt-2 border-t mt-4">
-                        *This information is grounded in the provided ONDC policy documents.
-                    </p>
-                </div>
-            );
-        }
-
-        // Plain Text or Error Renderer
-        const text = content.text || content;
-        return (
-            <div className={`p-3 rounded-lg whitespace-pre-wrap break-words ${content.type === 'error' ? 'bg-red-100 border border-red-400 text-red-800' : 'text-gray-700 bg-gray-50'}`}>
-                {text}
-            </div>
-        );
-    };
-
-    // --- FAQ Section Data and Renderer ---
-
-    const FAQ_QUESTIONS = [
-        "What are the legal obligations for a Buyer App in Food & Beverage category",
-        "What are the obligations for Buyer Apps under ONDC Network Policy?",
-        "What are the obligations for Seller Apps or Logistics Service Providers under ONDC Network Policy?",
-        "Can a seller sell online without a GST registration?",
-    ];
-
-    const FAQSection = () => (
-        <div className="p-6 bg-white border-t border-gray-200">
-            <h3 className="text-lg font-semibold text-gray-800 mb-4">Frequently Asked Questions</h3>
-            <div className="space-y-2">
-                {FAQ_QUESTIONS.map((q, index) => (
-                    <button
-                        key={index}
-                        onClick={() => handleSend(q)}
-                        className="w-full text-left p-3 text-sm text-indigo-700 bg-indigo-50 hover:bg-indigo-100 rounded-lg transition-colors border border-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                        disabled={isLoading}
-                    >
-                        {q}
-                    </button>
-                ))}
-            </div>
-        </div>
-    );
-
-    // --- Setup Screen Component ---
-
-    const SetupScreen = () => {
-        const handleSubmit = (e) => {
-            e.preventDefault();
-            // Optional: You could add a system message here to show the context was set
-            setMessages([{
-                role: 'system',
-                content: {
-                    type: 'text',
-                    text: `Context set: You are a **${persona}** operating in the **${category}** category. How can I assist with your ONDC compliance?`
-                }
-            }]);
-            setIsSetupComplete(true);
-        };
-
-        return (
-            <div className="flex items-center justify-center min-h-screen bg-gray-50 p-4">
-                <form onSubmit={handleSubmit} className="w-full max-w-md p-8 bg-white rounded-xl shadow-2xl border border-gray-100">
-                    <h1 className="text-3xl font-bold text-center text-indigo-800 mb-6">
-                        ONDC Compliance Assistant
-                    </h1>
-                    <p className="text-center text-gray-600 mb-8">
-                        Please define your role and operating category to get contextualized compliance advice.
-                    </p>
-
-                    <div className="space-y-6">
-                        {/* Persona Selector */}
-                        <div>
-                            <label htmlFor="persona" className="block text-sm font-medium text-gray-700 mb-2">
-                                1. Select Your Persona (Role)
-                            </label>
-                            <select
-                                id="persona"
-                                value={persona}
-                                onChange={(e) => setPersona(e.target.value)}
-                                required
-                                className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500 transition-colors"
-                            >
-                                {PERSONA_OPTIONS.map(opt => (
-                                    <option key={opt} value={opt}>{opt}</option>
-                                ))}
-                            </select>
-                        </div>
-
-                        {/* Category Selector (Flexible Input with Datalist) */}
-                        <div>
-                            <label htmlFor="category-input" className="block text-sm font-medium text-gray-700 mb-2">
-                                2. Enter or Select Your Operating Category
-                            </label>
-                            <input
-                                list="category-list"
-                                id="category-input"
-                                type="text"
-                                value={category}
-                                onChange={(e) => setCategory(e.target.value)}
-                                required
-                                className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500 transition-colors"
-                                placeholder="e.g., Food & Beverage, Mobility, etc."
-                            />
-                            <datalist id="category-list">
-                                {CATEGORY_OPTIONS.map(opt => (
-                                    <option key={opt} value={opt} />
-                                ))}
-                            </datalist>
-                        </div>
-
-                        <button
-                            type="submit"
-                            className="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-lg shadow-md text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150"
-                        >
-                            Start Chat
-                        </button>
-                    </div>
-                </form>
-            </div>
-        );
-    };
-
-
-    // --- Main App Renderer ---
-
-    if (!isSetupComplete) {
-        return <SetupScreen />;
-    }
-
+    // Main App Render
     return (
-        <div className="flex flex-col h-screen bg-gray-100 font-sans">
-            {/* Header */}
-            <header className="flex-shrink-0 bg-white shadow-md border-b border-indigo-200/50 p-4">
-                <h1 className="text-xl font-bold text-indigo-700">ONDC Compliance Assistant</h1>
-                <div className="text-sm text-gray-500 mt-1">
-                    Persona: <span className="font-semibold text-indigo-600">{persona}</span> | Category: <span className="font-semibold text-indigo-600">{category}</span>
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4 sm:p-6 font-sans">
+            <div className="w-full max-w-4xl h-[95vh] flex flex-col bg-white rounded-2xl shadow-2xl overflow-hidden">
+                
+                {/* Header */}
+                <div className="p-5 border-b border-gray-200 bg-indigo-700 text-white flex items-center rounded-t-2xl">
+                    <MessageSquare className="w-6 h-6 mr-3" />
+                    <h1 className="text-xl font-extrabold">ONDC Policy Clarity Chatbot</h1>
                 </div>
-            </header>
 
-            {/* Chat Messages Area */}
-            <main ref={messageRef} className="flex-grow overflow-y-auto p-4 md:p-6 space-y-4">
-                {messages.map((message, index) => (
-                    <div key={index} className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                        {message.role === 'user' ? (
-                            // User Message Bubble
-                            <div className="max-w-3/4 md:max-w-2xl px-4 py-3 bg-indigo-600 text-white rounded-t-xl rounded-bl-xl shadow-lg break-words">
+                {/* Main Content (Chat History + FAQ) */}
+                <div className="flex-1 overflow-y-auto p-4 space-y-4">
+                    
+                    {/* Initial System Message */}
+                    <div className="flex justify-start">
+                        <div className="max-w-xs md:max-w-md lg:max-w-lg p-3 rounded-xl shadow-md text-sm bg-indigo-100 text-indigo-900 rounded-tl-none">
+                            {state.messages[0].content}
+                        </div>
+                    </div>
+
+                    {/* FAQ / Quick Start Section */}
+                    {state.messages.length === 1 && !state.loading && (
+                        <div className="p-4 border border-indigo-200 bg-indigo-50 rounded-xl space-y-3">
+                            <h3 className="font-bold text-indigo-800 flex items-center">
+                                <Zap className="w-4 h-4 mr-2"/> Quick Start FAQs:
+                            </h3>
+                            <div className="flex flex-col space-y-2">
+                                {DEFAULT_FAQS.map((faq, index) => (
+                                    <button 
+                                        key={index}
+                                        onClick={() => handleFAQClick(faq)}
+                                        className="text-left text-sm p-3 bg-white border border-gray-200 rounded-lg hover:bg-indigo-100 transition duration-150 shadow-sm"
+                                    >
+                                        {faq}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+
+
+                    {/* Display User Messages (excluding initial system message) */}
+                    {state.messages.slice(1).map(message => (
+                        <div key={message.id} className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                            <div className={`max-w-xs md:max-w-md lg:max-w-lg p-3 rounded-xl shadow-md text-sm ${
+                                message.role === 'user' 
+                                    ? 'bg-indigo-600 text-white rounded-br-none' 
+                                    : 'bg-gray-100 text-gray-800 rounded-tl-none'
+                            }`}>
                                 {message.content}
                             </div>
-                        ) : (
-                            // Bot Message Bubble (with structured or text content)
-                            <div className="max-w-full md:max-w-4xl w-full">
-                                {renderMessageContent(message)}
-                            </div>
-                        )}
-                    </div>
-                ))}
+                        </div>
+                    ))}
 
-                {/* Loading Indicator */}
-                {isLoading && (
-                    <div className="flex justify-start">
-                        <div className="max-w-full md:max-w-4xl w-full">
-                            <div className="flex items-center p-4 rounded-lg bg-white shadow-lg border border-gray-200">
-                                <Loader className="h-5 w-5 mr-3 text-indigo-500 animate-spin" />
-                                <span className="text-gray-600 text-sm">
-                                    Analyzing **{persona}** obligations for the **{category}** category...
-                                </span>
+                    {/* Display Checklist Response (Result of the Query) */}
+                    {state.response && state.response.length > 0 && (
+                        <div className="space-y-3 pt-4">
+                            <div className="flex items-center text-indigo-700 font-bold text-lg border-b-2 border-indigo-200 pb-2 mb-3">
+                                <CheckCircle className="w-6 h-6 mr-2 flex-shrink-0" />
+                                Compliance Checklist ({state.response.length} Items Found)
+                            </div>
+                            {state.response.map(item => (
+                                <ChecklistItem key={item.id} item={item} />
+                            ))}
+                        </div>
+                    )}
+
+                    {/* Loading Indicator */}
+                    {state.loading && (
+                        <div className="flex justify-start py-4">
+                            <div className="p-3 rounded-xl shadow-md bg-gray-100 text-gray-800 rounded-tl-none flex items-center">
+                                <Clock className="w-4 h-4 mr-2 animate-pulse text-indigo-600" />
+                                <span className="text-sm">Analyzing policies...</span>
                             </div>
                         </div>
+                    )}
+                    
+                    {/* Error Display */}
+                    {state.error && (
+                        <div className="p-3 bg-red-100 border border-red-400 text-red-700 rounded-lg flex items-center shadow-md">
+                            <AlertTriangle className="w-5 h-5 mr-2 flex-shrink-0" />
+                            <span className="text-sm">{state.error}</span>
+                        </div>
+                    )}
+
+                    <div ref={chatEndRef} />
+                </div>
+
+                {/* Input Footer */}
+                <div className="p-4 border-t border-gray-200 bg-white">
+                    <form onSubmit={handleSubmit} className="flex space-x-3">
+                        <input
+                            type="text"
+                            value={state.currentQuery}
+                            onChange={(e) => setState(p => ({ ...p, currentQuery: e.target.value }))}
+                            placeholder="Ask a compliance question..."
+                            className="flex-1 p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 shadow-inner"
+                            disabled={state.loading}
+                        />
+                        <button
+                            type="submit"
+                            className="bg-indigo-600 text-white p-3 rounded-lg hover:bg-indigo-700 transition duration-200 disabled:bg-indigo-300 flex items-center justify-center shadow-md"
+                            disabled={!state.currentQuery.trim() || state.loading}
+                        >
+                            <Send className="w-5 h-5" />
+                        </button>
+                    </form>
+                    <div className="text-center mt-2 text-xs text-gray-500">
+                        *Responses are based on combined ONDC Network Policy and 'Laws of the Land' data.
                     </div>
-                )}
-            </main>
+                </div>
 
-            {/* FAQ and Input Area */}
-            <footer className="flex-shrink-0 bg-white border-t border-gray-200">
-                <FAQSection />
-
-                {/* Input Form */}
-                <form onSubmit={(e) => { e.preventDefault(); handleSend(input); }} className="p-4 md:p-6 flex items-center space-x-4">
-                    <input
-                        type="text"
-                        value={input}
-                        onChange={(e) => setInput(e.target.value)}
-                        placeholder="Ask an ONDC compliance question..."
-                        className="flex-grow p-3 border border-gray-300 rounded-lg shadow-inner focus:outline-none focus:ring-2 focus:ring-indigo-500 text-gray-900 transition-shadow"
-                        disabled={isLoading}
-                    />
-                    <button
-                        type="submit"
-                        className="flex-shrink-0 p-3 bg-indigo-600 text-white rounded-full shadow-lg hover:bg-indigo-700 transition duration-150 disabled:bg-indigo-300 focus:outline-none focus:ring-4 focus:ring-indigo-300"
-                        disabled={isLoading || !input.trim()}
-                        aria-label="Send message"
-                    >
-                        <Send className="h-6 w-6" />
-                    </button>
-                </form>
-            </footer>
+            </div>
         </div>
     );
-};
-
-export default App;
+}
